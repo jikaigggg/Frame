@@ -1,0 +1,12 @@
+package com.jikaigg.cglib;
+
+
+public class ProducerImpl1 {
+    public void saleProduct(Float fff) {
+        System.out.println("卖电脑了。。。" + fff);
+    }
+
+    public void salseService() {
+        System.out.println("售后了。。。");
+    }
+}

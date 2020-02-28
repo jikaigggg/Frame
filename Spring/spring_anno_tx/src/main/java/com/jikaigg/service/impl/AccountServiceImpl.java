@@ -28,7 +28,7 @@ public class AccountServiceImpl implements AccountService {
         Account source = accountDao.findAccountByName(sourceName);
         Account target = accountDao.findAccountByName(targetName);
         source.setMoney(source.getMoney()-money);
-        int i = 1/0;
+        // int i = 1/0;
         target.setMoney(target.getMoney()+money);
         accountDao.updateAccount(source);
         accountDao.updateAccount(target);

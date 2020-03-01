@@ -28,10 +28,12 @@
         <property name="password" value="123456"></property>
     </bean>
 
-    <!--<aop:config>
+    <bean id="txManager" class="com.jikaigg.utils.advice"></bean>
+
+    <aop:config>
         <aop:pointcut id="pt" expression="execution(* com.jikaigg.service.impl.*.*(..))"/>
         <aop:aspect id="txAdvice" ref="txManager">
-            &lt;!&ndash;配置前置通知，开启事务&ndash;&gt;
+            <!--配置前置通知，开启事务
             <aop:before method="beginTransfer" pointcut-ref="pt"></aop:before>
 
             &lt;!&ndash;配置后置通知，提交事务&ndash;&gt;
@@ -41,9 +43,11 @@
             <aop:after-throwing method="AfterThrowing" pointcut-ref="pt"></aop:after-throwing>
 
             &lt;!&ndash;配置最终通知，释放连接&ndash;&gt;
-            <aop:after method="After" pointcut-ref="pt"></aop:after>
+            <aop:after method="After" pointcut-ref="pt"></aop:after>-->
 
+            <!--配置环绕通知-->
+            <aop:around method="aroundPrintLog" pointcut-ref="pt"></aop:around>
         </aop:aspect>
-    </aop:config>-->
+    </aop:config>
 
 </beans>

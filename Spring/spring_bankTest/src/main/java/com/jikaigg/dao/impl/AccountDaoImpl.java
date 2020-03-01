@@ -5,14 +5,17 @@ import com.jikaigg.domain.Account;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 
+import java.util.List;
+
 public class AccountDaoImpl implements AccountDao {
     private JdbcTemplate jdbcTemplate;
     public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
-        // this.jdbcTemplate = jdbcTemplate;
+         this.jdbcTemplate = jdbcTemplate;
     }
 
     public Account findByName(String name) {
-        return jdbcTemplate.query("select * from account where name = ?",new BeanPropertyRowMapper<Account>(Account.class),name).get(0);
+        List<Account> accounts = jdbcTemplate.query("select * from account where name = ?",new BeanPropertyRowMapper<Account>(Account.class),name);
+        return accounts.isEmpty()?null:accounts.get(0);
     }
 
     public void updateAccount(Account account) {

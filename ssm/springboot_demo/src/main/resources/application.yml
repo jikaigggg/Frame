@@ -1,0 +1,24 @@
+
+# 修改改端口号
+server:
+  port: 8081
+  servlet:
+    path: "*.do"
+
+# 日志级别控制
+logging:
+  level:
+    com.jikaigg: debug
+    #org.springframework: debug
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/jikaigg
+    username: root
+    password: 123456
+mybatis:
+#  configuration:
+#    map-underscore-to-camel-case: true
+#  mapper-locations: mapper/*.xml
+  type-aliases-package: com.jikaigg.pojo

@@ -2,6 +2,7 @@ package com.jikaigg.mapper;
 
 import com.jikaigg.domain.Employee;
 import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
 
@@ -12,7 +13,13 @@ public interface EmployeeMapper {
      * @return
      */
     @Results(
-            id = ""
+            id = "employee",value = {
+                    @Result(property = "empId",column = "emp_id",id = true),
+                    @Result(property = "empName",column = "emp_name"),
+                    @Result(property = "empEmail",column = "emp_email"),
+                    @Result(property = "gender",column = "gender"),
+                    @Result(property = "departmentId",column = "department_id")
+    }
     )
     @Select("select * from tbl_emp where emp_id = #{empId}")
     Employee selectOneById(@Param("empId") Integer empId);

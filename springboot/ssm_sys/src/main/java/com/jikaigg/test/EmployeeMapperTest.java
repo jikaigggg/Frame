@@ -18,7 +18,5 @@ public class EmployeeMapperTest {
     public void testSelect(){
         Employee employee = employeeMapper.selectOneById(1);
         System.out.println(employee);
-
-
     }
 }

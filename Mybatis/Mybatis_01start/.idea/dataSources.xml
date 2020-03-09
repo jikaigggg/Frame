@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="jikaigg" uuid="fd0b6232-25d7-4956-ad57-7773418b2fd8">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/jikaigg?serverTimezone=GMT%2B8&amp;useSSL=false</jdbc-url>
+    </data-source>
+  </component>
+</project>

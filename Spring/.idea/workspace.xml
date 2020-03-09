@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cd7a4401-33e5-4919-8c90-833c2a865137" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/Spring.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_bankTest/src/main/java/com/jikaigg/utils/advice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring_bankTest/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring_bankTest/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring_bankTest/src/main/java/com/jikaigg/dao/impl/AccountDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring_bankTest/src/main/java/com/jikaigg/dao/impl/AccountDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring_bankTest/src/main/resources/bean.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring_bankTest/src/main/resources/bean.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring_bankTest/src/test/java/com/jikaigg/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring_bankTest/src/test/java/com/jikaigg/test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring_bankTest/target/classes/bean.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring_bankTest/target/classes/bean.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring_bankTest/target/classes/com/jikaigg/dao/impl/AccountDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/spring_bankTest/target/classes/com/jikaigg/dao/impl/AccountDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring_bankTest/target/test-classes/com/jikaigg/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/spring_bankTest/target/test-classes/com/jikaigg/test.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="C:\Java\repository" />
+        <option name="mavenHome" value="C:/Java/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="C:\Java\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1YFnLwc1dtw6CMpIzJz492x5ybp" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cd7a4401-33e5-4919-8c90-833c2a865137" name="Default Changelist" comment="" />
+      <created>1582547157150</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582547157150</updated>
+      <workItem from="1582547158490" duration="642000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+</project>

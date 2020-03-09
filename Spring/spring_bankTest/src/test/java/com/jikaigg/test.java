@@ -13,9 +13,9 @@ public class test {
     @Test
     public void test(){
         ApplicationContext ac = new ClassPathXmlApplicationContext("bean.xml");
-        AccountServiceImpl accountService = (AccountServiceImpl) ac.getBean("accountService", AccountService.class);
+        AccountService accountService = ac.getBean("accountService", AccountService.class);
         //AccountDaoImpl accountDao = (AccountDaoImpl) ac.getBean("accountDao", AccountDao.class);
-        accountService.transfer("yaojikai","shimengyu",100f);
+        accountService.transfer("yaojikai","shimengyu",10f);
         // Account yaojikai = accountDao.findByName("yaojikai");
         // System.out.println(yaojikai);
     }

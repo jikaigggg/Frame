@@ -3,7 +3,9 @@ package com.jikaigg.controller;
 import com.jikaigg.domain.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.ServletException;
@@ -79,5 +81,20 @@ public class UserController {
         //return "forward:/WEB-INF/pages/success.jsp";
         // 重定向
         return "redirect:/index.jsp";
+    }
+
+    /**
+     * 模拟异步请求与响应
+     */
+    @RequestMapping("testAjax")
+    public @ResponseBody User testAjax(@RequestBody User user){
+        System.out.println("testAjax执行了...");
+        //客户端发送的ajax请求，传的是json的字符串，后端已经把json字符串风转到user对象中
+        System.out.println(user);
+        //做响应,模拟查询数据库后出现了数据变化
+        user.setName("haha");
+        user.setAge(80);
+        return user;
+
     }
 }

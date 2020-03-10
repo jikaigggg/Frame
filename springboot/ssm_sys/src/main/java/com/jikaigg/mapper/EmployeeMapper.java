@@ -1,10 +1,9 @@
 package com.jikaigg.mapper;
 
 import com.jikaigg.domain.Employee;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Result;
-import org.apache.ibatis.annotations.Results;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
+
+import java.util.List;
 
 public interface EmployeeMapper {
     /**
@@ -18,7 +17,7 @@ public interface EmployeeMapper {
                     @Result(property = "empName",column = "emp_name"),
                     @Result(property = "empEmail",column = "emp_email"),
                     @Result(property = "gender",column = "gender"),
-                    @Result(property = "departmentId",column = "department_id")
+                    @Result(property = "departmentId",column = "department_id"),
     }
     )
     @Select("select * from tbl_emp where emp_id = #{empId}")
@@ -29,11 +28,52 @@ public interface EmployeeMapper {
      * @param empName
      * @return
      */
+    @ResultMap(value = "employee")
     @Select("select * from tbl_emp where emp_name = #{empName}")
     Employee selectOneByName(@Param("empName") String empName);
 
-    @Select("select * from tbl_emp e,tbl_dept d where e.department_id = d.dept_id and e.emp_id = #{emp_id}")
+    /**
+     * 查询带有部门信息的Employee
+     * @param empId
+     * @return
+     */
+//    @ResultMap(value = {"employee","department"})
+    @ResultMap(value = "employee")
+    @Select("select * from tbl_emp e,tbl_dept d where e.department_id = d.dept_id and e.emp_id = #{empId}")
     Employee selectWithDeptById(@Param("empId") Integer empId);
+
+    /**
+     * 新增用户信息
+     * @param employee
+     * @return
+     */
+    @ResultMap(value = "employee")
+    @Insert("insert into tbl_emp(emp_name,emp_email,gender,department_id) values(#{empName},#{empEmail},#{gender},#{departmentId})")
+    int insertOne(Employee employee);
+
+    /**
+     * 删除用户
+     * @param empId
+     * @return
+     */
+    @ResultMap(value = "employee")
+    @Delete("delete from tbl_emp where emp_id = #{empId}")
+    int deleteOne(@Param("empId") Integer empId);
+
+    /**
+     * 修改用户
+     * @param employee
+     * @return
+     */
+    @ResultMap(value = "employee")
+    @Update("update tbl_emp set emp_name = #{empName},emp_email = #{empEmail},gender = #{gender},department_id = #{departmentId} where emp_id = #{empId}")
+    int updateOne(Employee employee);
+
+
+//    @Select("select * from tbl_emp e left join tbl_dept d on e.department_id = d.dept_id order by emp_id limit #{limit},#{offset}")
+    List<Employee> selectLimitAndOffset(@Param("limit")Integer limit,@Param("offset")Integer offset);
+
+
 
 
 

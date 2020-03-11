@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.jikaigg.dao.UserDao">
+    <!--重复的sql语句可以抽取成代码片段，可以重复使用-->
+    <sql id="defaultUser">
+        select * from user
+    </sql>
+    <!--查询所有-->
+    <select id="findAll" resultType="com.jikaigg.domain.User">
+        <!--引用抽取的重复代码片段-->
+        <include refid="defaultUser"></include>
+    </select>
+
+    <!--根据用户id查询用户信息-->
+    <select id="findById" parameterType="int" resultType="com.jikaigg.domain.User">
+        select * from user where id = #{userId};
+    </select>
+
+    <!--根据username模糊查询用户信息-->
+    <select id="findByName" parameterType="String" resultType="com.jikaigg.domain.User">
+        <!-- 此处like后不加% % 在代码中编写时需要在字符串中添加百分号;;此方法采用的位prepatedstatement占位符的方式，常用 -->
+        select * from user where username like #{username};
+        <!--
+        另一种写法(value为固定写法，不可用其他字符串替代)，采用的是字符串拼接，不常用
+        select * from user where username like '%${value}%';
+        -->
+    </select>
+
+    <!--根绝QueryVo中的条件查询用户-->
+    <select id="finUserByVo" parameterType="com.jikaigg.domain.QueryVo" resultType="com.jikaigg.domain.User">
+        select * from user where username like #{user.username}
+    </select>
+
+    <!--根据条件查询
+    <select id="findUserByCondition" resultType="com.jikaigg.domain.User" parameterType="com.jikaigg.domain.User">
+        select * from user where 1=1
+        <if test="username != null">
+            and username = #{username};
+        </if>
+    </select>-->
+    <select id="findUserByCondition" resultType="User" parameterType="com.jikaigg.domain.User">
+        select * from user
+        <where>
+        <if test="username != null">
+            and username = #{username};
+        </if>
+        </where>
+    </select>
+
+    <!--根据queryvo中提供的id集合，查询用户信息-->
+    <select id="findUserInIds" resultType="User" parameterType="QueryVo">
+        select * from user
+        <where>
+            <if test="ids != null and ids.size()>0">
+                <foreach collection="ids" open="and id in(" close=")" item="id" separator=",">
+                    #{id}
+                </foreach>
+            </if>
+        </where>
+    </select>
+
+</mapper>

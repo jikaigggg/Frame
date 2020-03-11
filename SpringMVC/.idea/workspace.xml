@@ -1,31 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:maven" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:maven" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:SpringMVC" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:maven" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:SpringMVC" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:springMVC_01start" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:maven" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:SpringMVC" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:springMVC_02response" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:maven" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:SpringMVC" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:test" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="b01083ee-acc8-41d0-a30e-9c3e7defe661" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Spring/.idea/Spring.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Spring/spring_bankTest/src/main/java/com/jikaigg/utils/advice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springMVC_02response/.idea/springMVC_02response.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springMVC_02response/src/main/webapp/js/jquery.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/spring_bankTest/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/spring_bankTest/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/spring_bankTest/src/main/java/com/jikaigg/dao/impl/AccountDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/spring_bankTest/src/main/java/com/jikaigg/dao/impl/AccountDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/spring_bankTest/src/main/resources/bean.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/spring_bankTest/src/main/resources/bean.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/spring_bankTest/src/test/java/com/jikaigg/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/spring_bankTest/src/test/java/com/jikaigg/test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/spring_bankTest/target/classes/bean.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/spring_bankTest/target/classes/bean.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/spring_bankTest/target/classes/com/jikaigg/dao/impl/AccountDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/spring_bankTest/target/classes/com/jikaigg/dao/impl/AccountDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/spring_bankTest/target/test-classes/com/jikaigg/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/spring_bankTest/target/test-classes/com/jikaigg/test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springMVC_02response/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springMVC_02response/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springMVC_02response/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springMVC_02response/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springMVC_02response/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springMVC_02response/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springMVC_02response/src/main/java/com/jikaigg/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springMVC_02response/src/main/java/com/jikaigg/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springMVC_02response/src/main/resources/springMVC.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springMVC_02response/src/main/resources/springMVC.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springMVC_02response/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/springMVC_02response/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springMVC_02response/target/classes/com/jikaigg/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/springMVC_02response/target/classes/com/jikaigg/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springMVC_02response/target/classes/springMVC.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springMVC_02response/target/classes/springMVC.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springMVC_02response/target/springmvc_day01_01_start.war" beforeDir="false" afterPath="$PROJECT_DIR$/springMVC_02response/target/springmvc_day01_01_start.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springMVC_02response/target/springmvc_day01_01_start/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/springMVC_02response/target/springmvc_day01_01_start/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springMVC_02response/target/springmvc_day01_01_start/WEB-INF/classes/com/jikaigg/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/springMVC_02response/target/springmvc_day01_01_start/WEB-INF/classes/com/jikaigg/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springMVC_02response/target/springmvc_day01_01_start/WEB-INF/classes/springMVC.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springMVC_02response/target/springmvc_day01_01_start/WEB-INF/classes/springMVC.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springMVC_02response/target/springmvc_day01_01_start/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/springMVC_02response/target/springmvc_day01_01_start/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/java/com/jikaigg/controller/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/java/com/jikaigg/service/DepartmentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/java/com/jikaigg/service/EmployeeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/java/com/jikaigg/test/DepartmentServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/webapp/WEB-INF/static/error.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/webapp/WEB-INF/static/html/hrms_department.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/webapp/WEB-INF/static/html/hrms_employee.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/webapp/WEB-INF/static/html/hrms_foot.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/webapp/WEB-INF/static/html/hrms_head.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/webapp/WEB-INF/static/html/hrms_leftsidebar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/webapp/WEB-INF/static/html/hrms_main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/webapp/WEB-INF/static/img/company1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/webapp/WEB-INF/static/img/company2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/webapp/WEB-INF/static/img/company3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/webapp/WEB-INF/static/success.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/webapp/js/jquery-3.4.1.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springMVC_06ssm/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springMVC_06ssm/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springMVC_06ssm/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springMVC_06ssm/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/java/com/jikaigg/domain/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/java/com/jikaigg/domain/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/java/com/jikaigg/mapper/DepartmentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/java/com/jikaigg/mapper/DepartmentMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/java/com/jikaigg/mapper/EmployeeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/java/com/jikaigg/mapper/EmployeeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/java/com/jikaigg/test/DeptMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/java/com/jikaigg/test/DeptMapperTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/java/com/jikaigg/test/EmployeeMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/java/com/jikaigg/test/EmployeeMapperTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/resources/com/jikaigg/mapper/EmployeeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/resources/com/jikaigg/mapper/EmployeeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/resources/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/resources/springmvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/ssm_sys/target/classes/com/jikaigg/domain/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/ssm_sys/target/classes/com/jikaigg/domain/Employee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/ssm_sys/target/classes/com/jikaigg/mapper/DepartmentMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/ssm_sys/target/classes/com/jikaigg/mapper/DepartmentMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/ssm_sys/target/classes/com/jikaigg/mapper/EmployeeMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/ssm_sys/target/classes/com/jikaigg/mapper/EmployeeMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/ssm_sys/target/classes/com/jikaigg/mapper/EmployeeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/ssm_sys/target/classes/com/jikaigg/mapper/EmployeeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/ssm_sys/target/classes/com/jikaigg/test/DeptMapperTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/ssm_sys/target/classes/com/jikaigg/test/DeptMapperTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/ssm_sys/target/classes/com/jikaigg/test/EmployeeMapperTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/ssm_sys/target/classes/com/jikaigg/test/EmployeeMapperTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/ssm_sys/target/classes/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/ssm_sys/target/classes/springmvc.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,11 +143,23 @@
       <option name="presentableId" value="Default" />
       <updated>1582977517806</updated>
       <workItem from="1582977519300" duration="715000" />
+      <workItem from="1583921027873" duration="1000000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="178" y="107" key="new project wizard" timestamp="1582977615234">

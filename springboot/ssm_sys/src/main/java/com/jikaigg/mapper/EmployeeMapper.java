@@ -69,13 +69,15 @@ public interface EmployeeMapper {
     @Update("update tbl_emp set emp_name = #{empName},emp_email = #{empEmail},gender = #{gender},department_id = #{departmentId} where emp_id = #{empId}")
     int updateOne(Employee employee);
 
-
 //    @Select("select * from tbl_emp e left join tbl_dept d on e.department_id = d.dept_id order by emp_id limit #{limit},#{offset}")
     List<Employee> selectLimitAndOffset(@Param("limit")Integer limit,@Param("offset")Integer offset);
 
-
-
-
+    /**
+     * 查询总记录数
+     * @return
+     */
+    @Select("select count(*) from tbl_emp")
+    int countEmps();
 
 
 }

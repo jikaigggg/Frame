@@ -10,6 +10,7 @@ public class Employee {
     private String gender;
     private Integer departmentId;
 
+    private Department department;
 
     /*private Integer emp_id;
     private String emp_name;

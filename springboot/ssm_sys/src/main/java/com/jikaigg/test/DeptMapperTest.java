@@ -1,6 +1,7 @@
 package com.jikaigg.test;
 
 import com.jikaigg.domain.Department;
+import com.jikaigg.domain.Employee;
 import com.jikaigg.mapper.DepartmentMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -42,11 +43,13 @@ public class DeptMapperTest {
     }
 
     /**
-     * 测试根据id查询
+     * 测试根据id、部门名、部门领导名查询
      */
     @Test
     public void testSelectOneById(){
-        Department department = departmentMapper.selectOne(2);
+//        Department department = departmentMapper.selectOne(2);
+//        Department department = departmentMapper.selectOneByName("睡觉");
+        Department department = departmentMapper.selectOneByLeader("liububu");
         System.out.println(department);
     }
 
@@ -70,7 +73,15 @@ public class DeptMapperTest {
         }
     }
 
-
+    @Test
+    public void testCount(){
+        /*int i = departmentMapper.countDepts();
+        System.out.println(i);*/
+        List<Employee> employees = departmentMapper.selectLimitAndOffset(1, 2);
+        for (Employee employee : employees) {
+            System.out.println(employee);
+        }
+    }
 
 
 }

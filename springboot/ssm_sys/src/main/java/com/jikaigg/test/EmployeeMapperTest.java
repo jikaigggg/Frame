@@ -21,7 +21,7 @@ public class EmployeeMapperTest {
      * 测试根据id查询员工信息
      */
     @Test
-    public void testSelectOneById(){
+    public void testSelectOneById() {
         Employee employee = employeeMapper.selectOneById(2);
         System.out.println(employee);
     }
@@ -30,7 +30,7 @@ public class EmployeeMapperTest {
      * 测试根据name查询员工信息
      */
     @Test
-    public void testSelectIneByName(){
+    public void testSelectIneByName() {
         Employee employee = employeeMapper.selectOneByName("yaojikai");
         System.out.println(employee);
     }
@@ -39,7 +39,7 @@ public class EmployeeMapperTest {
      * 测试新增用户
      */
     @Test
-    public void testInsertOne(){
+    public void testInsertOne() {
         Employee employee = new Employee();
         employee.setEmpName("zhengnan");
         employee.setEmpEmail("zhengnan@qiyu.com");
@@ -53,7 +53,7 @@ public class EmployeeMapperTest {
      * 测试删除用户
      */
     @Test
-    public void testDeleteOne(){
+    public void testDeleteOne() {
         int i = employeeMapper.deleteOne(4);
         System.out.println(i);
     }
@@ -62,7 +62,7 @@ public class EmployeeMapperTest {
      * 测试修改
      */
     @Test
-    public void testUpdateOne(){
+    public void testUpdateOne() {
         Employee employee = new Employee();
         employee.setEmpId(3);
         employee.setEmpName("zhangda");
@@ -75,12 +75,16 @@ public class EmployeeMapperTest {
 
 
     @Test
-    public void selectWith(){
+    public void selectWith() {
         List<Employee> employees = employeeMapper.selectLimitAndOffset(2, 3);
         for (Employee employee : employees) {
             System.out.println(employee);
         }
-
     }
 
+    @Test
+    public void testCount(){
+        int i = employeeMapper.countEmps();
+        System.out.println(i);
+    }
 }

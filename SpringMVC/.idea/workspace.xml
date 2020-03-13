@@ -68,40 +68,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b01083ee-acc8-41d0-a30e-9c3e7defe661" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/java/com/jikaigg/controller/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/java/com/jikaigg/service/DepartmentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/java/com/jikaigg/service/EmployeeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/java/com/jikaigg/test/DepartmentServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/webapp/WEB-INF/static/error.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/webapp/WEB-INF/static/html/hrms_department.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/webapp/WEB-INF/static/html/hrms_employee.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/webapp/WEB-INF/static/html/hrms_foot.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/webapp/WEB-INF/static/html/hrms_head.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/webapp/WEB-INF/static/html/hrms_leftsidebar.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/webapp/WEB-INF/static/html/hrms_main.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/webapp/WEB-INF/static/img/company1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/webapp/WEB-INF/static/img/company2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/webapp/WEB-INF/static/img/company3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/webapp/WEB-INF/static/success.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/webapp/js/jquery-3.4.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/webapp/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/webapp/test.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springMVC_06ssm/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springMVC_06ssm/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springMVC_06ssm/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springMVC_06ssm/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/java/com/jikaigg/domain/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/java/com/jikaigg/domain/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/java/com/jikaigg/mapper/DepartmentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/java/com/jikaigg/mapper/DepartmentMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/java/com/jikaigg/mapper/EmployeeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/java/com/jikaigg/mapper/EmployeeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/java/com/jikaigg/test/DeptMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/java/com/jikaigg/test/DeptMapperTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/java/com/jikaigg/test/EmployeeMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/java/com/jikaigg/test/EmployeeMapperTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/resources/com/jikaigg/mapper/EmployeeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/resources/com/jikaigg/mapper/EmployeeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/resources/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/resources/springmvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/java/com/jikaigg/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/java/com/jikaigg/controller/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/ssm_sys/target/classes/com/jikaigg/domain/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/ssm_sys/target/classes/com/jikaigg/domain/Employee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/ssm_sys/target/classes/com/jikaigg/mapper/DepartmentMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/ssm_sys/target/classes/com/jikaigg/mapper/DepartmentMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/ssm_sys/target/classes/com/jikaigg/mapper/EmployeeMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/ssm_sys/target/classes/com/jikaigg/mapper/EmployeeMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/ssm_sys/target/classes/com/jikaigg/mapper/EmployeeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/ssm_sys/target/classes/com/jikaigg/mapper/EmployeeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/ssm_sys/target/classes/com/jikaigg/test/DeptMapperTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/ssm_sys/target/classes/com/jikaigg/test/DeptMapperTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/ssm_sys/target/classes/com/jikaigg/test/EmployeeMapperTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/ssm_sys/target/classes/com/jikaigg/test/EmployeeMapperTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/ssm_sys/target/classes/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/ssm_sys/target/classes/springmvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/webapp/js/jquery-3.4.1.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/ssm_sys/src/main/webapp/js/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/ssm_sys/target/classes/com/jikaigg/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/ssm_sys/target/classes/com/jikaigg/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/ssm_sys/target/ssm_sys.war" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/ssm_sys/target/ssm_sys.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/ssm_sys/target/ssm_sys/WEB-INF/classes/com/jikaigg/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/ssm_sys/target/ssm_sys/WEB-INF/classes/com/jikaigg/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/ssm_sys/target/ssm_sys/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/ssm_sys/target/ssm_sys/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,6 +106,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="SvnConfiguration">
@@ -144,6 +126,7 @@
       <updated>1582977517806</updated>
       <workItem from="1582977519300" duration="715000" />
       <workItem from="1583921027873" duration="1000000" />
+      <workItem from="1583983522445" duration="1399000" />
     </task>
     <servers />
   </component>

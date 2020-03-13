@@ -22,5 +22,8 @@ public class DepartmentService {
         return departmentMapper.selectAll();
     }
 
+    public List<Department> findAll(){
+        return departmentMapper.findAll();
+    }
 
 }

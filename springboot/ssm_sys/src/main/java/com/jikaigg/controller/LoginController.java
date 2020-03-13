@@ -8,15 +8,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
+import java.io.Serializable;
 
 @Controller
 @RequestMapping("user")
-public class LoginController {
+public class LoginController implements Serializable {
     @RequestMapping("login")
     @ResponseBody
     public int login(HttpServletRequest request) {
-        String username = request.getParameter("name");
-        String password = request.getParameter("pwd");
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
         System.out.println(username);
         System.out.println(password);
         int result = 1;

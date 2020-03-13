@@ -24,4 +24,12 @@ public class DepartmentServiceTest {
             System.out.println(department);
         }
     }
+
+    @Test
+    public void testFindAll(){
+        List<Department> departments = departmentService.findAll();
+        for (Department department : departments) {
+            System.out.println(department);
+        }
+    }
 }

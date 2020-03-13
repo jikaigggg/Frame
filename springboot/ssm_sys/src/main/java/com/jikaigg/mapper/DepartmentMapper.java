@@ -81,4 +81,10 @@ public interface DepartmentMapper {
      */
     @Select("select count(*) from tbl_dept")
     int countDepts();
+
+
+
+    List<Department> findAll();
+
+
 }

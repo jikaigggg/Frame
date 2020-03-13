@@ -9,7 +9,7 @@
         <result property = "empEmail" column = "emp_email" />
         <result property = "gender" column = "gender" />
         <result property = "departmentId" column = "department_id" />
-        <association property="department" javaType="com.jikaigg.domain.Department">
+        <association property="department" column="department_id" javaType="com.jikaigg.domain.Department">
             <id property="deptId" column="dept_id" />
             <result property="deptName" column="dept_name" />
             <result property="deptLeader" column="dept_leader" />

@@ -15,36 +15,32 @@
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <![endif]-->
-<script src="/js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript">
+    function login() {
+        $.ajax({
+            url: "user/login",
+            data: {"username": $("#empName").val(), "password": $("#empEmail").val()},
+            success: function () {
+                if (retult == 1) {
+                    window.location.href = "success.jsp"
+                } else {
+                    alert("用户不存在")
+                }
+            }
+        })
+    }
+</script>
 <html>
 <head>
     <title>登陆</title>
 </head>
 <body>
 <form action="#" method="post" id="loginform">
-    用户名：<input type="text" name="empName">   <br>
-    密码： <input type="text" name="empEmail"> <br>
-    <button id="btn">提交</button>
+    用户名：<input type="text" id="empName"> <br>
+    密码： <input type="text" id="empEmail"> <br>
+    <a href="javascript:login()" id="btn">提交</a>
 </form>
-
-<script type="text/javascript">
-    // 页面加载，绑定单击事件
-    $(function () {
-        $("#btn").click(function () {
-            // alert("hello");
-            $.ajax({
-                url:"user/testAjax",
-                contentType:"application/json;charset=UTF-8",
-                data:'',
-                dataType:"json",
-                type:"POST",
-                success:function (data) {
-                    alert("1");
-                }
-            })
-        });
-    });
-</script>
 
 
 </body>

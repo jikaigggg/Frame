@@ -1,0 +1,5 @@
+[INFO][2020-03-11 22:37:37] com.jikaigg.test.Test1.testLog(Test1.java:29) main yaojikai 
+    [INFO][2020-03-11 22:39:03] com.jikaigg.test.Test1.testLog(Test1.java:29) main yaojikai 
+    [INFO][2020-03-11 22:39:16] com.jikaigg.test.Test1.testLog(Test1.java:29) main yaojikai 
+    [INFO][2020-03-11 22:40:05] com.jikaigg.test.Test1.testLog(Test1.java:29) main yaojikai 
+    

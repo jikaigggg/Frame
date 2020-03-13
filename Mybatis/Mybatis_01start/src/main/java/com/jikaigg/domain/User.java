@@ -2,16 +2,16 @@ package com.jikaigg.domain;
 
 
 public class User {
-    private Integer id;
+    private Integer emp_id;
     private String uname;
     private Integer age;
 
-    public Integer getId() {
-        return id;
+    public Integer getEmp_id() {
+        return emp_id;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setEmp_id(Integer emp_id) {
+        this.emp_id = emp_id;
     }
 
     public String getUname() {
@@ -33,7 +33,7 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "id=" + id +
+                "id=" + emp_id +
                 ", uname='" + uname + '\'' +
                 ", age=" + age +
                 '}';

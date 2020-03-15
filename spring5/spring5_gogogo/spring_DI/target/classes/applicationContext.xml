@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="student" class="com.jikaigg.pojo.Student">
+        <!--第一种注入，普通类型值注入-->
+        <property name="name" value="yaojikai" />
+        <!--第二种注入，对象注入(bean注入)-->
+        <property name="address" ref="address" />
+        <!--第三种注入，String数组注入-->
+        <property name="books">
+            <array>
+                <value>三国演义</value>
+                <value>西游记</value>
+                <value>水浒传</value>
+                <value>红楼梦</value>
+            </array>
+        </property>
+        <!--第四种注入，List数组注入-->
+        <property name="hobbys">
+            <list>
+                <value>睡觉</value>
+                <value>打游戏</value>
+                <value>吃饭</value>
+            </list>
+        </property>
+        <!--第五种注入，Map注入-->
+        <property name="card">
+            <map>
+                <entry key="身份证" value="130282199509170017" />
+                <entry key="银行卡" value="62185599897736" />
+            </map>
+        </property>
+        <!--第六种注入，set注入-->
+        <property name="games">
+            <set>
+                <value>英雄联盟</value>
+                <value>QQ飞车</value>
+            </set>
+        </property>
+        <!--第七种注入，null值注入-->
+        <property name="wife">
+            <null></null>
+        </property>
+        <!--第八种注入，properties注入-->
+        <property name="info">
+            <props>
+                <prop key="phone">15233340551</prop>
+                <prop key="tall">180cm</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="address" class="com.jikaigg.pojo.Address">
+        <property name="address" value="唐山" />
+    </bean>
+
+    <!--p命名空间注入，对应properties-->
+<!--    <bean id="user" class="com.jikaigg.pojo.User" p:username="yaojikai" p:password="123456"  />-->
+    <!--c命名空间注入，对应constructor-org-->
+    <bean id="user" class="com.jikaigg.pojo.User" c:_0="yaojikai" c:_1="123456"/>
+
+
+</beans>

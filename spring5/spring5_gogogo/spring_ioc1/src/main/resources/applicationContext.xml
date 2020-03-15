@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--
+    使用spring创建对象
+    bean标签中参数简介：
+        id：bean的唯一标识符，也相当于我们的对象名
+        class：bean对象所对应的全限定名
+        name：别名，可以同时取多个别名name="hello2,hello3"可以去取两个别名
+
+    -->
+    <bean id="hello" class="com.jikaigg.pojo.Hello" name="hello2,hello3">
+        <property name="name" value="么济恺" />
+    </bean>
+
+    <bean id="user" class="com.jikaigg.pojo.User">
+        <property name="name" value="yaojikai" />
+    </bean>
+
+    <!--创建仅有有参构造方法的bean,第一种方法：通过下标注入，对应构造函数的参数列表里的index-->
+    <!--<bean id="student" class="com.jikaigg.pojo.Student">
+        <constructor-arg index="0" value="jikai" />
+    </bean>-->
+
+    <!--创建仅有有参构造方法的bean,第二种方法：通过类型注入，需要填全限定名，不建议使用，如果构造器中有多个参数，这个方法不灵-->
+    <!--<bean id="student" class="com.jikaigg.pojo.Student">
+        <constructor-arg type="java.lang.String" value="crayon" />
+    </bean>-->
+
+    <!--创建仅有有参构造方法的bean,第三种方法：通过输入参数名-->
+    <bean id="student" class="com.jikaigg.pojo.Student">
+        <constructor-arg name="name" value="kaige"/>
+    </bean>
+
+    <!--import一般用于团队开发，可以将多个配置文件，导入同一个-->
+
+
+
+
+</beans>

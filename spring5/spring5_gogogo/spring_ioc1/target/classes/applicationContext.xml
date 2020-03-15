@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--使用spring创建对象-->
+    <bean id="hello" class="com.jikaigg.pojo.Hello">
+        <property name="name" value="么济恺" />
+    </bean>
+
+    <bean id="user" class="com.jikaigg.pojo.User">
+        <property name="name" value="yaojikai" />
+    </bean>
+
+    <!--创建仅有有参构造方法的bean,第一种方法：通过下标注入，对应构造函数的参数列表里的index-->
+    <!--<bean id="student" class="com.jikaigg.pojo.Student">
+        <constructor-arg index="0" value="jikai" />
+    </bean>-->
+
+    <!--创建仅有有参构造方法的bean,第二种方法：通过类型注入，需要填全限定名，不建议使用，如果构造器中有多个参数，这个方法不灵-->
+    <!--<bean id="student" class="com.jikaigg.pojo.Student">
+        <constructor-arg type="java.lang.String" value="crayon" />
+    </bean>-->
+
+    <!--创建仅有有参构造方法的bean,第三种方法：通过输入参数名-->
+    <bean id="student" class="com.jikaigg.pojo.Student">
+        <constructor-arg name="name" value="kaige"/>
+    </bean>
+
+
+</beans>

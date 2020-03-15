@@ -3,8 +3,10 @@ package com.jikaigg.domain;
 
 public class User {
     private Integer emp_id;
-    private String uname;
-    private Integer age;
+    private String emp_name;
+    private String emp_email;
+    private String gender;
+    private String department_id;
 
     public Integer getEmp_id() {
         return emp_id;
@@ -14,28 +16,46 @@ public class User {
         this.emp_id = emp_id;
     }
 
-    public String getUname() {
-        return uname;
+    public String getEmp_name() {
+        return emp_name;
     }
 
-    public void setUname(String uname) {
-        this.uname = uname;
+    public void setEmp_name(String emp_name) {
+        this.emp_name = emp_name;
     }
 
-    public Integer getAge() {
-        return age;
+    public String getEmp_email() {
+        return emp_email;
     }
 
-    public void setAge(Integer age) {
-        this.age = age;
+    public void setEmp_email(String emp_email) {
+        this.emp_email = emp_email;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getDepartment_id() {
+        return department_id;
+    }
+
+    public void setDepartment_id(String department_id) {
+        this.department_id = department_id;
     }
 
     @Override
     public String toString() {
         return "User{" +
-                "id=" + emp_id +
-                ", uname='" + uname + '\'' +
-                ", age=" + age +
+                "emp_id=" + emp_id +
+                ", emp_name='" + emp_name + '\'' +
+                ", emp_email='" + emp_email + '\'' +
+                ", gender='" + gender + '\'' +
+                ", department_id='" + department_id + '\'' +
                 '}';
     }
 }

@@ -6,9 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="spring_aop" />
-        <module name="spring_DI" />
         <module name="spring_mybatis" />
+        <module name="spring_DI" />
+        <module name="spring_aop" />
         <module name="spring_ioc1" />
         <module name="spring_AutoWired" />
         <module name="spring_anno" />

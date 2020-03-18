@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>json</title>
+    <script type="text/javascript">
+        //编写一个javascript对象
+        var user = "{taxCode=3100191130, taxNum=38302662, taxDate=20190821, taxTime=202718, xfSbh=91310120MA1HKETE0F, xfName=上海盟慧机电科技有限公司, gfSbh=913101156073999437, gfName=上海ABB工程有限公司, taxStat=0, taxType=004, number=1, taxLineType=0, productName=*其他机械设备*manhour, productModel=45061867560010, productQuantity=1, price=78816.5, amount=78816.5, discountAmt=null, taxRate=0.06, taxAmt=4728.99, hasTaxFlag=0, productCode=1099900000000000000, selfCode=015S, taxIncentivesFlag=0, taxZeroFlag=, vatSpecial=}";
+        console.log(user)
+        var parse = JSON.stringify(user);
+        console.log(parse)
+        var user1 = '{"yao":"jikai","shi":"mengyu","zhang":"dapao"}'
+        var obj = JSON.parse(user1);
+        console.log(obj);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

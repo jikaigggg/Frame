@@ -1,0 +1,5 @@
+com\jikaigg\pojo\Books.class
+com\jikaigg\controller\BookController.class
+com\jikaigg\service\impl\BookServiceImpl.class
+com\jikaigg\dao\BookMapper.class
+com\jikaigg\service\BookService.class

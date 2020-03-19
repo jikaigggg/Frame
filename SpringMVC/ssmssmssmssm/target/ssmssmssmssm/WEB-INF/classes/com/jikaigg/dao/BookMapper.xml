@@ -17,10 +17,16 @@
     </update>
 
     <select id="queryBookById" parameterType="int" resultType="Books">
-        select * from books where bookId = #{bookId}
+        select * from books where bookId = #{id}
     </select>
 
     <select id="findAll" resultType="Books">
         select * from books
     </select>
+
+    <select id="queryBookByName" resultType="Books">
+        select * from books where bookName = #{name}
+    </select>
+
+
 </mapper>

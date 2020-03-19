@@ -38,4 +38,10 @@ public interface BookService {
      * @return
      */
     List<Books> findAll();
+
+    /**
+     * 根据name查书
+     * @return
+     */
+    Books queryBookByName(String name);
 }

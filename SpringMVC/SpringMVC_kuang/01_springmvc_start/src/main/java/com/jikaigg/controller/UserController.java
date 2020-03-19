@@ -33,15 +33,40 @@ public class UserController {
         return s;
     }
 
-    @RequestMapping("json2")
+    @RequestMapping("a2")
+    @ResponseBody
+    public List<User> a2(){
+        List<User> users = new ArrayList<User>();
+        users.add(new User("yaojikai",18,"男"));
+        users.add(new User("shimengyu",18,"女"));
+        users.add(new User("xiaoxin",18,"男"));
+        users.add(new User("fengjian",18,"男"));
+        return users;
+    }
+    @RequestMapping("login")
+    @ResponseBody
+    public String login(String name){
+        System.out.println(name);
+        String msg = null;
+        if (name!=null){
+            if ("yaojikai".equals(name)){
+                msg = "OK";
+            }else {
+                msg = "fail";
+            }
+        }
+        return msg;
+    }
+
+    /*@RequestMapping("json2")
     @ResponseBody
     public String test2() throws JsonProcessingException {
         Date date = new Date();
-        /*SimpleDateFormat sdf = new SimpleDateFormat("yyyy:MM:dd");
+        *//*SimpleDateFormat sdf = new SimpleDateFormat("yyyy:MM:dd");
         System.out.println(sdf);
         String time = sdf.format(date);
         System.out.println(time);
-        System.out.println(date);*/
+        System.out.println(date);*//*
         return new ObjectMapper().writeValueAsString();
-    }
+    }*/
 }

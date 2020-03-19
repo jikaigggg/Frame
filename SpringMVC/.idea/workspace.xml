@@ -67,24 +67,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b01083ee-acc8-41d0-a30e-9c3e7defe661" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ssmssm/src/main/java/com/jikaigg/controller/BookController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ssmssm/src/main/java/com/jikaigg/dao/BookMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ssmssm/src/main/java/com/jikaigg/pojo/Books.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ssmssm/src/main/java/com/jikaigg/service/BookService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ssmssm/src/main/java/com/jikaigg/service/impl/BookServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ssmssm/src/main/resources/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ssmssm/src/main/resources/com/jikaigg/dao/BookMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ssmssm/src/main/resources/jdbc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ssmssm/src/main/resources/mybatis-spring.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ssmssm/src/main/resources/spring-dao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ssmssm/src/main/resources/spring-service.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ssmssm/src/main/resources/springmvc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ssmssm/web/WEB-INF/jsp/allbook.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ssmssm/web/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ssmssm/web/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="b01083ee-acc8-41d0-a30e-9c3e7defe661" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -111,7 +94,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/springmvc_kuang" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -135,6 +118,7 @@
       <workItem from="1583983522445" duration="1399000" />
       <workItem from="1584434850116" duration="1341000" />
       <workItem from="1584543224868" duration="382000" />
+      <workItem from="1584622753970" duration="25000" />
     </task>
     <servers />
   </component>
@@ -153,6 +137,10 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
+    <state x="740" y="335" key="FileChooserDialogImpl" timestamp="1584622777494">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="740" y="335" key="FileChooserDialogImpl/-1920.115.1536.832/0.0.1920.1160@0.0.1920.1160" timestamp="1584622777494" />
     <state x="456" y="172" key="new project wizard" timestamp="1584543601438">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>

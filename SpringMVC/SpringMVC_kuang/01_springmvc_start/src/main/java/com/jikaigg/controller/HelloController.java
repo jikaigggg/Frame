@@ -5,6 +5,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
 @Controller
 public class HelloController {
     @RequestMapping("hello")
@@ -50,4 +53,15 @@ public class HelloController {
     public String test3(){
         return "redirect:/index.jsp";
     }
+
+    @RequestMapping("a1")
+    public void ajaxtest(String name, HttpServletResponse response) throws IOException {
+        System.out.println(name);
+        if ("yaojikai".equals(name)){
+            response.getWriter().write("true");
+        } else {
+            response.getWriter().write("false");
+        }
+    }
+
 }

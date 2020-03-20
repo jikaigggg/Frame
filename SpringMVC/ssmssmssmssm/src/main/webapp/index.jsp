@@ -10,6 +10,13 @@
 
 <div>
 <a href="${pageContext.request.contextPath}/book/allbook" class="btn btn-primary btn-lg" style="text-align: center">进入书籍页面</a>
+
+<div>
+    <form action="user/login" method="post">
+        用户名：<input type="text" id="username">
+
+    </form>
+</div>
 </div>
 </body>
 </html>

@@ -22,7 +22,7 @@
             url: "user/login",
             data: {"username": $("#empName").val(), "password": $("#empEmail").val()},
             success: function () {
-                if (retult == 1) {
+                if (retult === 1) {
                     window.location.href = "success.jsp"
                 } else {
                     alert("用户不存在")

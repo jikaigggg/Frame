@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>双向绑定</title>
+</head>
+<body>
+<div id="app1">
+ <yaojikai v-for="item in items" v-bind:jikai="item"></yaojikai>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.min.js"></script>
+<script>
+    /*定义一个vue组件*/
+    Vue.component("yaojikai",{props:['jikai'],template:'<li>{{jikai}}</li>'});
+
+    var vm1 = new Vue({
+        el:"#app1",
+        data: {items:["yaojikai","shimengyu"]}
+    });
+
+</script>
+</body>
+</html>

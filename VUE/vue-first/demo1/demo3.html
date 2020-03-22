@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>双向绑定</title>
+</head>
+<body>
+<!--文本框-->
+<div id="app1">
+        文本框：<input type="text" v-model="message1">{{message1}} <br><br><br><br>
+        多行文本框:<textarea cols="30" rows="10" v-model="message2"></textarea> {{message2}}
+</div>
+
+<!--单选框-->
+<div id="app2">
+    <input type="radio" name="gender" value="man" v-model="yaojikai">男
+    <input type="radio" name="gender" value="woman" v-model="yaojikai">女 选中了 {{yaojikai}}
+</div>
+
+<!--下拉框-->
+<div id="app3">
+    <select v-model="shimengyu">
+        <option value="" disabled>--请选择--</option>
+        <option>北京</option>
+        <option>上海</option>
+        <option>天津</option>
+    </select>
+    {{shimengyu}}
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.min.js"></script>
+<script>
+    var vm1 = new Vue({
+        el:"#app1",
+        data: {message1:null,message2:null}
+    });
+    var vm2 = new Vue({
+        el:"#app2",
+        data: {yaojikai:null}
+    });
+    var vm3 = new Vue({
+        el:"#app3",
+        data: {shimengyu:null}
+    });
+
+
+</script>
+</body>
+</html>

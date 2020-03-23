@@ -1,0 +1,24 @@
+#普通的key=value
+#下面的配置等同于properties中的server.port=8081
+server:
+  port: 8081
+
+#对象
+#下面的写法等同于properties中配置student.name=yaojikai    student.age=18
+student:
+  name: yaojikai
+  age: 18
+#行内写法
+#student: {name: shimengyu,age: 19}
+
+#数组
+pets:
+  - dog
+  - cat
+  - #行内写法
+#pets: [dog,cat]
+
+
+#yaml可以直接给实体类赋值
+
+

@@ -1,10 +1,13 @@
 package com.jikaigg.start.pojo;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Dog {
+    @Value("吉祥")
     private String name;
+    @Value("3")
     private Integer age;
 
     public Dog() {

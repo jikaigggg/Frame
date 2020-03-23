@@ -16,7 +16,6 @@ import java.util.Map;
 public class Person {
     private String name;
     private Integer age;
-
     private Boolean happy;
     private Date birthday;
     private Map<String,Object> maps;

@@ -1,23 +1,25 @@
 package com.jikaigg.start;
 
-import com.jikaigg.start.pojo.Dog;
-import com.jikaigg.start.pojo.Person;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.AutoConfigureOrder;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-@EnableConfigurationProperties(Person.class)
 class StartApplicationTests {
-
-    @Autowired
-    private Person person;
-
+    Logger logger = LoggerFactory.getLogger(getClass());
     @Test
-    void contextLoads() {
-        System.out.println(person);
+    public void contextLoads() {
+
+        System.out.println("\u4e00\u4e2a\u5927\u54e5\u5728\u770b\u4f60!");
+        //日志的级别
+        //由低到高：
+        //可以调整输出的日志级别
+        /*logger.trace("这是trace日志");
+        logger.debug("这是debug日志");
+        logger.info("这是info日志");
+        logger.warn("这是warn日志");
+        logger.error("这是error日志");*/
     }
 
 }

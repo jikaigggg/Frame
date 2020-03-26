@@ -1,0 +1,34 @@
+2020-03-25 23:39:10.193  INFO 1696 --- [main] com.jikaigg.start.StartApplicationTests  : Starting StartApplicationTests on YA3XUONDFNLN03R with PID 1696 (started by Administrator in D:\githuby\Frame\springboot\20200322\start)
+2020-03-25 23:39:10.194 DEBUG 1696 --- [main] com.jikaigg.start.StartApplicationTests  : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-03-25 23:39:10.195  INFO 1696 --- [main] com.jikaigg.start.StartApplicationTests  : No active profile set, falling back to default profiles: default
+2020-03-25 23:39:12.274  INFO 1696 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-25 23:39:12.709  INFO 1696 --- [main] com.jikaigg.start.StartApplicationTests  : Started StartApplicationTests in 3.281 seconds (JVM running for 5.488)
+2020-03-25 23:39:13.045 TRACE 1696 --- [main] com.jikaigg.start.StartApplicationTests  : 这是trace日志
+2020-03-25 23:39:13.046 DEBUG 1696 --- [main] com.jikaigg.start.StartApplicationTests  : 这是debug日志
+2020-03-25 23:39:13.046  INFO 1696 --- [main] com.jikaigg.start.StartApplicationTests  : 这是info日志
+2020-03-25 23:39:13.046  WARN 1696 --- [main] com.jikaigg.start.StartApplicationTests  : 这是warn日志
+2020-03-25 23:39:13.046 ERROR 1696 --- [main] com.jikaigg.start.StartApplicationTests  : 这是error日志
+2020-03-25 23:39:13.158  INFO 1696 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-25 [main] INFO  com.jikaigg.start.StartApplicationTests - Starting StartApplicationTests on YA3XUONDFNLN03R with PID 10920 (started by Administrator in D:\githuby\Frame\springboot\20200322\start)
+2020-03-25 [main] DEBUG com.jikaigg.start.StartApplicationTests - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-03-25 [main] INFO  com.jikaigg.start.StartApplicationTests - No active profile set, falling back to default profiles: default
+2020-03-25 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-25 [main] INFO  com.jikaigg.start.StartApplicationTests - Started StartApplicationTests in 2.741 seconds (JVM running for 6.482)
+2020-03-25 [main] TRACE com.jikaigg.start.StartApplicationTests - 这是trace日志
+2020-03-25 [main] DEBUG com.jikaigg.start.StartApplicationTests - 这是debug日志
+2020-03-25 [main] INFO  com.jikaigg.start.StartApplicationTests - 这是info日志
+2020-03-25 [main] WARN  com.jikaigg.start.StartApplicationTests - 这是warn日志
+2020-03-25 [main] ERROR com.jikaigg.start.StartApplicationTests - 这是error日志
+2020-03-25 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-25 [main] INFO  com.jikaigg.start.StartApplicationTests - Starting StartApplicationTests on YA3XUONDFNLN03R with PID 3812 (started by Administrator in D:\githuby\Frame\springboot\20200322\start)
+2020-03-25 [main] DEBUG com.jikaigg.start.StartApplicationTests - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-03-25 [main] INFO  com.jikaigg.start.StartApplicationTests - No active profile set, falling back to default profiles: default
+2020-03-25 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-25 [main] INFO  com.jikaigg.start.StartApplicationTests - Started StartApplicationTests in 3.082 seconds (JVM running for 5.014)
+2020-03-25 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-25 [main] INFO  com.jikaigg.start.StartApplicationTests - Starting StartApplicationTests on YA3XUONDFNLN03R with PID 8940 (started by Administrator in D:\githuby\Frame\springboot\20200322\start)
+2020-03-25 [main] DEBUG com.jikaigg.start.StartApplicationTests - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-03-25 [main] INFO  com.jikaigg.start.StartApplicationTests - No active profile set, falling back to default profiles: default
+2020-03-25 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-25 [main] INFO  com.jikaigg.start.StartApplicationTests - Started StartApplicationTests in 2.967 seconds (JVM running for 4.66)
+2020-03-25 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'

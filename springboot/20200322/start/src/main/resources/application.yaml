@@ -12,3 +12,17 @@ person:
 
 server:
   port:
+
+#配置日志输出级别，trace以上全部输出
+logging:
+  level:
+    com:
+      jikaigg: trace
+
+  file:
+    path: ./test
+  pattern:
+    #在控制台输出日志的格式
+    console: "%d{yyyy-MM-dd} [%thread] %-5level %logger{50} - %msg%n"
+    #在文件中输出日志的格式
+    file: "%d{yyyy-MM-dd} [%thread] %-5level %logger{50} - %msg%n"

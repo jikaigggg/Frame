@@ -31,7 +31,6 @@ public class MyMvcConfig extends WebMvcConfigurerAdapter{
                 registry.addViewController("/main.html").setViewName("dashboard");
 
             }
-
             @Override
             public void addResourceHandlers(ResourceHandlerRegistry registry) {
                 registry.addResourceHandler("/static/**").addResourceLocations("classpath:/staitc/");

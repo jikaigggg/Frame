@@ -50,34 +50,37 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div th:replace="commons/bar::#sidebar(activeUri='emps')"></div>
-
 				<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+					<!--区分修改还是添加-->
 					<form th:action="@{/emp}" method="post">
+						<!--发送put请求-->
+						<input type="hidden" name="_method" value="PUT" th:if="${emp!=null}">
+						<input type="hidden" name="id" th:if="${emp!=null}" th:value="${emp.id}">
 						<div class="form-group">
 							<label for="lastName">lastName</label>
-							<input name="lastName" type="text" class="form-control" id="lastName" placeholder="lastName">
+							<input name="lastName" type="text" class="form-control" id="lastName" placeholder="lastName" th:value="${emp!=null}?${emp.lastName}">
 						</div>
 						<div class="form-group">
 							<label for="email">Email address</label>
-							<input name="email" type="email" class="form-control" id="email" placeholder="Email">
+							<input name="email" type="email" class="form-control" id="email" placeholder="Email" th:value="${emp!=null}?${emp.email}">
 						</div>
 						gender:
 						<label class="radio-inline">
-							<input type="radio" name="gender" id="man" value="1"> 男
+							<input type="radio" name="gender" id="man" value="1" th:checked="${emp!=null}?${emp.gender==1}"> 男
 						</label>
 						<label class="radio-inline">
-							<input type="radio" name="gender" id="woman" value="0"> 女
+							<input type="radio" name="gender" id="woman" value="0" th:checked="${emp!=null}?${emp.gender==0}"> 女
 						</label>
 						<br>
 						部门:
 						<select class="form-control" name="department.id">
-						<option th:value="${dept.id}" th:each="dept:${depts}" th:text="${dept.departmentName}"></option>
+						<option th:selected="${emp!=null}?${dept.id == emp.department.id}" th:value="${dept.id}" th:each="dept:${depts}" th:text="${dept.departmentName}"></option>
 					</select>
 						<div class="form-group">
 							<label for="birth">lastName</label>
-							<input type="text" name="birth" class="form-control" id="birth" placeholder="birth">
+							<input type="text" name="birth" class="form-control" id="birth" placeholder="birth" th:value="${emp!=null}?${#dates.format(emp.birth,'yyyy-MM-dd')}">
 						</div>
-						<button type="submit" class="btn btn-default">Submit</button>
+						<button type="submit" class="btn btn-default" th:text="${emp!=null}?'修改':'添加'"></button>
 					</form>
 				</main>
 			</div>

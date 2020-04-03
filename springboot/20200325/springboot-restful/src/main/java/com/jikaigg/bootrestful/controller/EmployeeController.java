@@ -7,7 +7,14 @@ import com.jikaigg.bootrestful.entities.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+<<<<<<< HEAD
 import org.springframework.web.bind.annotation.*;
+=======
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+>>>>>>> ff446fbd775a127ef2fcbaf7fae0ac3a6379dc37
 
 import javax.jws.WebParam;
 import java.util.Collection;
@@ -49,15 +56,31 @@ public class EmployeeController {
     @PostMapping("/emp")
     public String addEmployee(Employee employee){
         employeeDao.save(employee);
-        System.out.println(employee);
         return "redirect:/emps";
     }
 
+<<<<<<< HEAD
     @DeleteMapping("/emp/{id}")
     public String deleteEmp(@PathVariable("id")Integer id){
         employeeDao.delete(id);
         return "redirect:/emps";
 
+=======
+    @GetMapping("/emp/{id}")
+    public String toEditPage(@PathVariable("id") Integer id,Model model){
+        Employee employee = employeeDao.get(id);
+        Collection<Department> departments = departmentDao.getDepartments();
+        model.addAttribute("depts",departments);
+        model.addAttribute("emp",employee);
+        //回到修改页面
+        return "emp/add";
+    }
+
+    @PutMapping("/emp")
+    public String editEmployee(Employee employee){
+        employeeDao.save(employee);
+        return "redirect:emps";
+>>>>>>> ff446fbd775a127ef2fcbaf7fae0ac3a6379dc37
     }
 
 }

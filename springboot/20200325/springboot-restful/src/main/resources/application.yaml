@@ -3,7 +3,13 @@ server:
 #  servlet:
 #    context-path: /crud
 
+
+
 spring:
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
   profiles:
     active: dev
   messages:

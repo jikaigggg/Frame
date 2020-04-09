@@ -21,10 +21,17 @@ public class test {
 
         //当前盈余
         float kuisun = (j1 + j2) * a - 5500;
-        System.out.println("当前盈余情况："+kuisun);
+        System.out.println("当前盈余情况：" + kuisun);
 
         //两次平均后当时购买的单位净值
         float ax = 5500 / (j1 + j2);
-        System.out.println("平均单位净值"+ax);
+        System.out.println("平均单位净值" + ax);
+    }
+
+    @Test
+    public void test2() {
+        float num = 4545.10f;
+        float price = 1.0043f;
+        System.out.println("当前盈余:" + (num * price - 5500));
     }
 }

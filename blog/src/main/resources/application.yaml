@@ -2,9 +2,17 @@ spring:
   datasource:
     username: root
     password: 123456
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/blog?serverTimezone=GMT%2B8&useSSL=false&characterEncoding=utf-8
+    #driver-class-name: com.mysql.cj.jdbc.Driver
+    #url: jdbc:mysql://localhost:3306/blog?serverTimezone=GMT%2B8&useSSL=false&characterEncoding=utf-8
+    url: jdbc:h2:~/blog1
+    driver-class-name: org.h2.Driver
   thymeleaf:
     cache: false
 server:
   port: 8081
+
+github:
+  client_id: 25dfca1441f3eb7d27d1
+  setClient_secret: fbb646ba45215115300244461080a85ea3077625
+  setRedirect_uri: http://localhost:8081/callback
+

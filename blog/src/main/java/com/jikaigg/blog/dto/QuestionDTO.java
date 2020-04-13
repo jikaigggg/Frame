@@ -1,12 +1,12 @@
-package com.jikaigg.blog.pojo;
+package com.jikaigg.blog.dto;
 
+import com.jikaigg.blog.pojo.User;
 import lombok.Data;
 
-import javax.persistence.criteria.CriteriaBuilder;
 import java.io.Serializable;
 
 @Data
-public class Question implements Serializable {
+public class QuestionDTO implements Serializable {
     private Integer id;
     private String title;
     private String description;
@@ -17,4 +17,5 @@ public class Question implements Serializable {
     private Integer viewCount;
     private Integer likeCount;
     private String tag;
+    private User user;
 }

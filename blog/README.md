@@ -30,7 +30,8 @@ CREATE TABLE PUBLIC.user(
      name VARCHAR(500),
      token VARCHAR(36),
      create_time BIGINT,
-     modified_time BIGINT
+     modified_time BIGINT,
+     avatar_url VARCHAR(100)
 );
 ```
 
@@ -42,7 +43,7 @@ CREATE TABLE PUBLIC.question(
      title VARCHAR(50),
      description TEXT,
          create_time BIGINT,
-     modified BIGINT,
+     modified_time BIGINT,
      creator INT,
      comment_count INT default 0,
      view_count INT default 0,

@@ -55,6 +55,7 @@ public class AythorizeController {
             user.setAccountId(String.valueOf(githubUser.getId()));
             user.setCreateTime(System.currentTimeMillis());
             user.setCreateTime(user.getCreateTime());
+            user.setAvatarUrl(githubUser.getAvatarUrl());
             userMapper.inserUser(user);
             response.addCookie(new Cookie("token",token));
             //重定向到首页

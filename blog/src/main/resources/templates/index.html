@@ -5,6 +5,8 @@
     <title>蜡笔</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/blog.css">
+
     <script src="js/bootstrap.min.js" type="javascript"></script>
 </head>
 <body>
@@ -14,11 +16,8 @@
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span class="sr-only">蜡笔</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">蜡笔</a>
+            <a class="navbar-brand" href="/">蜡笔</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -44,6 +43,29 @@
         </div>
     </div>
 </nav>
+<div class="container-fluid main">
+    <div class="row">
+        <div class="col-lg-9 col-md-12 col-sm-21 col-xs-12">
+            <h3><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> 发布</h3>
+            <hr>
+            <div class="media"  th:each="question:${questionList}">
+                <div class="media-left">
+                    <a href="#">
+                        <img class="media-object img-rounded img-avatar" th:src="${question.user.avatarUrl}">
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading" th:text="${question.title}"></h4>
+                    <span th:text="${question.description}"></span>
+                    <span class="text-desc"><span th:text="${question.commentCount}"></span> 个回复 - <span th:text="${question.viewCount}"></span> 次浏览 - <span th:text="${#dates.format(question.modifiedTime)}"></span></span>
+                </div>
+            </div>
 
+        </div>
+        <div class="col-lg-3 col-md-12 col-sm-21 col-xs-12">
+
+        </div>
+    </div>
+</div>
 </body>
 </html>

@@ -4,7 +4,7 @@ spring:
     password: 123456
     #driver-class-name: com.mysql.cj.jdbc.Driver
     #url: jdbc:mysql://localhost:3306/blog?serverTimezone=GMT%2B8&useSSL=false&characterEncoding=utf-8
-    url: jdbc:h2:~/blog1
+    url: jdbc:h2:~/blog
     driver-class-name: org.h2.Driver
   thymeleaf:
     cache: false

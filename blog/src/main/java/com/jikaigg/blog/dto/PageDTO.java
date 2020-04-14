@@ -67,9 +67,9 @@ public class PageDTO {
         }
         //是否展示第一页
         if (pages.contains(1)) {
-            showPrevious = false;
+            showFirstPage = false;
         } else {
-            showPrevious = true;
+            showFirstPage = true;
         }
         //是否展示最后一页
         if (pages.contains(totalPage)) {
@@ -77,7 +77,5 @@ public class PageDTO {
         } else {
             showEndPage = true;
         }
-
-
     }
 }

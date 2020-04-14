@@ -24,31 +24,31 @@ CREATE TABLE `user_info` (
 account_id,name,token,create_time,modified_time
 ```sql
 #用户表
-CREATE TABLE PUBLIC.user(
-     id INT AUTO_INCREMENT PRIMARY KEY ,
-     account_id VARCHAR(100),
-     name VARCHAR(500),
-     token VARCHAR(36),
-     create_time BIGINT,
-     modified_time BIGINT,
-     avatar_url VARCHAR(100)
+CREATE TABLE blog.user(
+    id INT AUTO_INCREMENT PRIMARY KEY ,
+    account_id VARCHAR(100),
+    name VARCHAR(500),
+    token VARCHAR(36),
+    create_time BIGINT,
+    modified_time BIGINT,
+    avatar_url VARCHAR(100)
 );
 ```
 
 #### 问题表
 ```sql
 #问题表
-CREATE TABLE PUBLIC.question(
-     id INT AUTO_INCREMENT PRIMARY KEY ,
-     title VARCHAR(50),
-     description TEXT,
-         create_time BIGINT,
-     modified_time BIGINT,
-     creator INT,
-     comment_count INT default 0,
-     view_count INT default 0,
-     like_count INT default 0,
-     tag VARCHAR(256)
+CREATE TABLE blog.question(
+    id INT AUTO_INCREMENT PRIMARY KEY ,
+    title VARCHAR(50),
+    description TEXT,
+    create_time BIGINT,
+    modified_time BIGINT,
+    creator INT,
+    comment_count INT default 0,
+    view_count INT default 0,
+    like_count INT default 0,
+    tag VARCHAR(256)
 );
 ```
 

@@ -32,4 +32,9 @@ public class BlogApplicationTests {
         System.out.println(response);
         System.out.println(response.code());
     }
+    @Test
+    public void test3(){
+        System.out.println(Math.ceil(3.5f));
+    }
+
 }

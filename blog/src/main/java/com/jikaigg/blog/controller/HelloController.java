@@ -48,6 +48,9 @@ public class HelloController {
                 }
             }
         }else {
+            PageDTO pageList = questionService.selectList(page,size);
+
+            model.addAttribute("pageList", pageList);
             return "index";
         }
 

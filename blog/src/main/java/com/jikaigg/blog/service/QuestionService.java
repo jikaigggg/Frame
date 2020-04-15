@@ -21,18 +21,25 @@ public class QuestionService {
     @Autowired
     UserMapper userMapper;
 
+    /**
+     * 首页分页展示问题列表
+     *
+     * @param page
+     * @param size
+     * @return
+     */
     public PageDTO selectList(Integer page, Integer size) {
         List<QuestionDTO> questionDTOS = new ArrayList<QuestionDTO>();
         PageDTO pageDTO = new PageDTO();
         //获取到数据库中question记录数
         Integer totalCount = questionMapper.counts();
-        pageDTO.setPagination(totalCount,page,size);
+        pageDTO.setPagination(totalCount, page, size);
 
         //只能选择已有页数
-        if (page<1){
-            page=1;
+        if (page < 1) {
+            page = 1;
         }
-        if (page>pageDTO.getTotalPage()){
+        if (page > pageDTO.getTotalPage()) {
             page = pageDTO.getTotalPage();
         }
 
@@ -48,6 +55,45 @@ public class QuestionService {
         }
         //将遍历出来的问题列表存到pageDTO中
         pageDTO.setQuestions(questionDTOS);
+
+        return pageDTO;
+    }
+
+    /**
+     * 指定作者id查找问题列表
+     *
+     * @param userId
+     * @param page
+     * @param size
+     */
+    public PageDTO selectList(Integer userId, Integer page, Integer size) {
+        List<QuestionDTO> questionDTOS = new ArrayList<QuestionDTO>();
+        PageDTO pageDTO = new PageDTO();
+        //获取到数据库中question记录数
+        Integer totalCount = questionMapper.counts();
+        pageDTO.setPagination(totalCount, page, size);
+
+        //只能选择已有页数
+        if (page < 1) {
+            page = 1;
+        }
+        if (page > pageDTO.getTotalPage()) {
+            page = pageDTO.getTotalPage();
+        }
+
+        Integer offset = size * (page - 1);
+        List<Question> questionList = questionMapper.selectUserList(userId, offset, size);
+
+        for (Question question : questionList) {
+            User user = userMapper.findById(question.getCreator());
+            QuestionDTO questionDTO = new QuestionDTO();
+            BeanUtils.copyProperties(question, questionDTO);
+            questionDTO.setUser(user);
+            questionDTOS.add(questionDTO);
+        }
+        //将遍历出来的问题列表存到pageDTO中
+        pageDTO.setQuestions(questionDTOS);
+
 
         return pageDTO;
     }

@@ -30,18 +30,27 @@ public class QuestionService {
      */
     public PageDTO selectList(Integer page, Integer size) {
         List<QuestionDTO> questionDTOS = new ArrayList<QuestionDTO>();
+        Integer totalPage;
         PageDTO pageDTO = new PageDTO();
         //获取到数据库中question记录数
         Integer totalCount = questionMapper.counts();
-        pageDTO.setPagination(totalCount, page, size);
+
+        if (totalCount % size == 0) {
+            totalPage = totalCount / size;
+        } else {
+            totalPage = totalCount / size + 1;
+        }
 
         //只能选择已有页数
         if (page < 1) {
             page = 1;
         }
-        if (page > pageDTO.getTotalPage()) {
-            page = pageDTO.getTotalPage();
+        if (page > totalPage) {
+            page = totalPage;
         }
+
+        //        System.out.println(totalCount);
+        pageDTO.setPagination(totalCount, page);
 
         Integer offset = size * (page - 1);
         List<Question> questionList = questionMapper.selectList(offset, size);
@@ -68,18 +77,27 @@ public class QuestionService {
      */
     public PageDTO selectList(Integer userId, Integer page, Integer size) {
         List<QuestionDTO> questionDTOS = new ArrayList<QuestionDTO>();
+        Integer totalPage;
         PageDTO pageDTO = new PageDTO();
         //获取到数据库中question记录数
         Integer totalCount = questionMapper.counts();
-        pageDTO.setPagination(totalCount, page, size);
+
+        if (totalCount % size == 0) {
+            totalPage = totalCount / size;
+        } else {
+            totalPage = totalCount / size + 1;
+        }
 
         //只能选择已有页数
         if (page < 1) {
             page = 1;
         }
-        if (page > pageDTO.getTotalPage()) {
-            page = pageDTO.getTotalPage();
+        if (page > totalPage) {
+            page = totalPage;
         }
+
+        //        System.out.println(totalCount);
+        pageDTO.setPagination(totalCount, page);
 
         Integer offset = size * (page - 1);
         List<Question> questionList = questionMapper.selectUserList(userId, offset, size);
@@ -93,6 +111,7 @@ public class QuestionService {
         }
         //将遍历出来的问题列表存到pageDTO中
         pageDTO.setQuestions(questionDTOS);
+//        System.out.println(pageDTO);
 
 
         return pageDTO;

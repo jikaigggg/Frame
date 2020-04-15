@@ -23,41 +23,16 @@ import java.util.List;
 @Controller
 public class HelloController {
     @Autowired
-    UserMapper userMapper;
-    @Autowired
     QuestionService questionService;
 
     @GetMapping("/")
     public String hello(@RequestParam(value = "page", defaultValue = "1") Integer page,
                         @RequestParam(value = "size", defaultValue = "5") Integer size,
-                        HttpServletRequest request,
                         Model model) {
-        //在访问首页的时候校验用户是否在是登陆状态，验证数据库中是否已有数据
-        Cookie[] cookies = request.getCookies();
-        if (cookies!=null){
-            for (Cookie cookie : cookies) {
-                if (cookie.getName().equals("token")) {
-                    String token = cookie.getValue();
-                    //根据token查询数据库中是否有记录，有记录代表用户有信息，不用再次登陆
-                    User user = userMapper.findByToken(token);
-                    if (user != null) {
-                        //将查询出来的用户name存入session，前段可以直接取出来
-                        request.getSession().setAttribute("user", user);
-                    }
-                    break;
-                }
-            }
-        }else {
-            PageDTO pageList = questionService.selectList(page,size);
-
-            model.addAttribute("pageList", pageList);
-            return "index";
-        }
-
-        PageDTO pageList = questionService.selectList(page,size);
-
+        PageDTO pageList = questionService.selectList(page, size);
         model.addAttribute("pageList", pageList);
 //        System.out.println(questionList);
         return "index";
     }
+
 }

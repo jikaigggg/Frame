@@ -50,7 +50,7 @@ public class QuestionService {
         }
 
         //        System.out.println(totalCount);
-        pageDTO.setPagination(totalCount, page);
+        pageDTO.setPagination(totalPage, page);
 
         Integer offset = size * (page - 1);
         List<Question> questionList = questionMapper.selectList(offset, size);
@@ -64,6 +64,7 @@ public class QuestionService {
         }
         //将遍历出来的问题列表存到pageDTO中
         pageDTO.setQuestions(questionDTOS);
+//        System.out.println(pageDTO);
 
         return pageDTO;
     }
@@ -80,7 +81,7 @@ public class QuestionService {
         Integer totalPage;
         PageDTO pageDTO = new PageDTO();
         //获取到数据库中question记录数
-        Integer totalCount = questionMapper.counts();
+        Integer totalCount = questionMapper.userCounts(userId);
 
         if (totalCount % size == 0) {
             totalPage = totalCount / size;
@@ -97,7 +98,7 @@ public class QuestionService {
         }
 
         //        System.out.println(totalCount);
-        pageDTO.setPagination(totalCount, page);
+        pageDTO.setPagination(totalPage, page);
 
         Integer offset = size * (page - 1);
         List<Question> questionList = questionMapper.selectUserList(userId, offset, size);
@@ -115,5 +116,19 @@ public class QuestionService {
 
 
         return pageDTO;
+    }
+
+    /**
+     * 根据问题id查询问题对象
+     *
+     * @param id
+     * @return
+     */
+    public QuestionDTO getQuestionById(Integer id) {
+        Question question = questionMapper.getQuestionById(id);
+        QuestionDTO questionDTO = new QuestionDTO();
+        BeanUtils.copyProperties(question, questionDTO);
+        questionDTO.setUser(userMapper.findById(question.getCreator()));
+        return questionDTO;
     }
 }

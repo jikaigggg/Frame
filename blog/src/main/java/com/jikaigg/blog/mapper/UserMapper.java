@@ -1,14 +1,12 @@
 package com.jikaigg.blog.mapper;
 
 import com.jikaigg.blog.pojo.User;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 @Mapper
 public interface UserMapper {
-    @Insert("insert into user(account_id,name,token,create_time,modified_time,avatar_url) values(#{accountId},#{name},#{token},#{createTime},#{modifiedTime},#{avatarUrl})")
+    @Insert("insert into user(account_id,name,token,create_time,modified_time,avatar_url) " +
+            "values(#{accountId},#{name},#{token},#{createTime},#{modifiedTime},#{avatarUrl})")
     void inserUser(User user);
 
     @Select("select * from user where token = #{token}")
@@ -16,4 +14,11 @@ public interface UserMapper {
 
     @Select("select * from user where id = #{id}")
     User findById(@Param("id") Integer id);
+
+    @Select("select * from user where account_id = #{accountId}")
+    User findByAccountId(@Param("accountId") String accountId);
+
+    @Update("update user set name = #{name},token = #{token},modified_time = #{modifiedTime},avatar_url = #{avatarUrl} " +
+            "where id = #{id}")
+    void updateUser(User user);
 }

@@ -11,6 +11,7 @@ public class UserService {
     private UserMapper userMapper;
 
     public void createOrUpdate(User user) {
+        System.out.println("1111");
         User dbUser = userMapper.findByAccountId(user.getAccountId());
         if (dbUser == null){
             user.setCreateTime(System.currentTimeMillis());

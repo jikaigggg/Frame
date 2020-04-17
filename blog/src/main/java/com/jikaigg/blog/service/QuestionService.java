@@ -131,4 +131,14 @@ public class QuestionService {
         questionDTO.setUser(userMapper.findById(question.getCreator()));
         return questionDTO;
     }
+
+    public void createOrUpdate(Question question) {
+        Question questionById = questionMapper.getQuestionById(question.getId());
+        if (questionById != null){
+            question.setModifiedTime(System.currentTimeMillis());
+            questionMapper.updateQuestion(question);
+        }else {
+            questionMapper.createQuestion(question);
+        }
+    }
 }

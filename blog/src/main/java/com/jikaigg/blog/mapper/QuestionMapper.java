@@ -2,10 +2,7 @@ package com.jikaigg.blog.mapper;
 
 import com.jikaigg.blog.dto.QuestionDTO;
 import com.jikaigg.blog.pojo.Question;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
@@ -60,4 +57,7 @@ public interface QuestionMapper {
      */
     @Select("select * from question where id = #{id}")
     Question getQuestionById(@Param("id") Integer id);
+
+    @Update("update question set title = #{title},description = #{description},tag = #{tag},modified_time = #{modifiedTime} where id = #{id}")
+    void updateQuestion(Question question);
 }

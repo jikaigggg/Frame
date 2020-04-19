@@ -141,4 +141,8 @@ public class QuestionService {
             questionMapper.createQuestion(question);
         }
     }
+
+    public void flushViewCount(Integer id) {
+        questionMapper.flushViewCount(id);
+    }
 }

@@ -58,6 +58,24 @@ public interface QuestionMapper {
     @Select("select * from question where id = #{id}")
     Question getQuestionById(@Param("id") Integer id);
 
+    /**
+     * 修改问题
+     * @param question
+     */
     @Update("update question set title = #{title},description = #{description},tag = #{tag},modified_time = #{modifiedTime} where id = #{id}")
     void updateQuestion(Question question);
+
+    /**
+     * 更新评论数+1
+     * @param id
+     */
+    @Update("update question set comment_count = comment_count +1 where id = #{id}")
+    void updateQuestionCommentCount(@Param("id")Integer id);
+
+    /**
+     * 更细查看数+1
+     * @param id
+     */
+    @Update("update question set view_count = view_count + 1 where id = #{id}")
+    void flushViewCount(@Param("id") Integer id);
 }

@@ -52,3 +52,18 @@ CREATE TABLE blog.question(
 );
 ```
 
+
+#### 评论表
+```sql
+#评论表
+CREATE TABLE blog.comment(
+    id BIGINT AUTO_INCREMENT PRIMARY KEY COMMENT '',
+    parent_id BIGINT COMMENT '父类ID',
+    content VARCHAR(1024) COMMENT '评论内容',
+    type INT COMMENT '父类类型',
+    commentator INT COMMENT '评论人ID',
+    create_time BIGINT COMMENT '创建时间',
+    modified_time BIGINT COMMENT '更新时间',
+    like_count BIGINT COMMENT '点赞数'
+);
+```

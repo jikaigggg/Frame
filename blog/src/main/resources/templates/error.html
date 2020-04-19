@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>蜡笔</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/css/blog.css">
+    <script src="/js/jquery-3.4.1.min.js" type="application/javascript"></script>
+    <script src="/js/bootstrap.min.js" type="application/javascript"></script>
+</head>
+<body>
+<nav th:replace="~{header}"></nav>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-21 col-xs-12">
+            <div class="jumbotron">
+                <h1>出错出错了!</h1>
+                <p th:text="${message}"></p>
+                <p><a class="btn btn-primary btn-lg" th:href="@{/}" role="button">返回首页</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

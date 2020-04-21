@@ -26,17 +26,17 @@ public class Test1 {
         SqlSession sqlSession = factory.openSession(true);
         UserMapper mapper = sqlSession.getMapper(UserMapper.class);
         HashMap<String, String> map = new HashMap<String, String>();
-        map.put("id","1");
-        map.put("name","yaojikai");
-        map.put("email","yaojikai@gmail.com");
+        map.put("id", "1");
+        map.put("name", "yaojikai");
+        map.put("email", "yaojikai@gmail.com");
 //        map.put("gender","男");
-        map.put("departmentId","2");
+        map.put("departmentId", "2");
         int i = mapper.updateOne(map);
 
     }
 
     @Test
-    public void testLog() throws Exception{
+    public void testLog() throws Exception {
         InputStream in = Resources.getResourceAsStream("SqlMapConfig.xml");
         SqlSessionFactory factory = new SqlSessionFactoryBuilder().build(in);
         SqlSession sqlSession = factory.openSession();
@@ -48,14 +48,14 @@ public class Test1 {
     }
 
     @Test
-    public void test3(){
+    public void test3() {
         String uuid = UUID.randomUUID().toString();
-        String UUID = uuid.replace("-","");
-        System.out.println(uuid+"\n"+UUID);
+        String UUID = uuid.replace("-", "");
+        System.out.println(uuid + "\n" + UUID);
     }
 
     @Test
-    public void test4() throws Exception{
+    public void test4() throws Exception {
         UserMapper mapper = new SqlSessionFactoryBuilder().build(Resources.getResourceAsStream("SqlMapConfig.xml")).openSession(true).getMapper(UserMapper.class);
         User user = new User();
         user.setEmp_name("shimengyu");
@@ -74,7 +74,7 @@ public class Test1 {
         ArrayList<Integer> bbb = new ArrayList<Integer>();
         bbb.add(1);
         bbb.add(3);
-        aaa.put("ids",bbb);
+        aaa.put("ids", bbb);
         List<User> users = mapper.selectIn(aaa);
         for (User user : users) {
             System.out.println(user);

@@ -22,20 +22,22 @@ public class JdbcConfig {
 
     /**
      * 创建JdbcTemplate对象
+     *
      * @param dataSource
      * @return
      */
     @Bean(name = "jdbcTemplate")
-    public JdbcTemplate createJdbcTemplate(DataSource dataSource){
+    public JdbcTemplate createJdbcTemplate(DataSource dataSource) {
         return new JdbcTemplate(dataSource);
     }
 
     /**
      * 创建数据源对象
+     *
      * @return
      */
-    @Bean(name="dataSource")
-    public DataSource createDataSource(){
+    @Bean(name = "dataSource")
+    public DataSource createDataSource() {
         DriverManagerDataSource ds = new DriverManagerDataSource();
         ds.setDriverClassName(driver);
         ds.setUrl(url);

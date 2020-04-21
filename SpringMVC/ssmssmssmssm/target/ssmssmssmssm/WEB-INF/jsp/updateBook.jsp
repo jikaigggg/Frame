@@ -29,7 +29,8 @@
         </div>
         <div class="form-group">
             <label for="bookCounts">书籍数量</label>
-            <input type="text" class="form-control" id="bookCounts" name="bookCounts" value="${books.bookCounts}" required>
+            <input type="text" class="form-control" id="bookCounts" name="bookCounts" value="${books.bookCounts}"
+                   required>
         </div>
         <div class="form-group">
             <label for="detail">书籍说明</label>

@@ -23,13 +23,13 @@ public class CommentController {
     CommentService commentService;
 
     @ResponseBody
-    @RequestMapping(value = "/comment",method = RequestMethod.POST)
+    @RequestMapping(value = "/comment", method = RequestMethod.POST)
     public ResultDTO post(@RequestBody CommentDTO commentDTO,
-                          HttpServletRequest request){
+                          HttpServletRequest request) {
         //从request中获取user
         User user = (User) request.getSession().getAttribute("user");
         //通过判断是否存在user，判断用户是否登录，如果没有登录，进行异常处理，提示用户登录
-        if (user == null){
+        if (user == null) {
             return ResultDTO.errorOf(CustomizeErrorCode.NO_LOGIN);
         }
 //        System.out.println(commentDTO);

@@ -23,6 +23,7 @@ public class UserTest {
 
     /**
      * 初始化是执行
+     *
      * @throws IOException
      */
     @Before //用于在测试方法执行之前执行
@@ -39,6 +40,7 @@ public class UserTest {
         userDao = session.getMapper(UserDao.class);
 
     }
+
     /**
      * 结束时执行
      */
@@ -54,7 +56,7 @@ public class UserTest {
      * 测试查询所有,同时获取到当前账户的所属账户信息
      */
     @Test
-    public void testFindAll(){
+    public void testFindAll() {
         List<User> users = userDao.findAll();
         for (User user : users) {
             System.out.println(user);

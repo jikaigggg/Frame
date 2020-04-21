@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <settings>
-        <setting name="logImpl" value="LOG4J" />
+        <setting name="logImpl" value="LOG4J"/>
     </settings>
 
     <environments default="mybatis">
@@ -20,6 +20,6 @@
     </environments>
 
     <mappers>
-        <mapper resource="com/jikaigg/mapper/UserMapper.xml" />
+        <mapper resource="com/jikaigg/mapper/UserMapper.xml"/>
     </mappers>
 </configuration>

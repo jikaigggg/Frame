@@ -25,7 +25,7 @@ public class AccountServiceImpl2 implements AccountService {
     }
 
     public void saveAccount() {
-        System.out.println("service方法中的saveAccount"+"---"+name+"---"+age+"---"+birthday);
+        System.out.println("service方法中的saveAccount" + "---" + name + "---" + age + "---" + birthday);
     }
 
 }

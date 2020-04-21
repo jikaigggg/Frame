@@ -10,6 +10,7 @@ import java.util.List;
 public interface QuestionMapper {
     /**
      * 提问的时候插入数据库问题数据
+     *
      * @param question
      */
     @Insert("insert into question(title,description,create_time,modified_time,creator,tag) " +
@@ -18,6 +19,7 @@ public interface QuestionMapper {
 
     /**
      * 首页查询问题，并进行分页处理
+     *
      * @param offset
      * @param size
      * @return
@@ -27,6 +29,7 @@ public interface QuestionMapper {
 
     /**
      * 首页查询数据库中所有问题数量
+     *
      * @return
      */
     @Select("select count(*) from question")
@@ -34,14 +37,16 @@ public interface QuestionMapper {
 
     /**
      * 查询单个用户的问题数量
+     *
      * @param userId
      * @return
      */
     @Select("select count(*) from question where creator = #{userId}")
-    Integer userCounts(@Param("userId")Integer userId);
+    Integer userCounts(@Param("userId") Integer userId);
 
     /**
      * 根据用户id查询问题列表，并处理分页问题
+     *
      * @param userId
      * @param offset
      * @param size
@@ -52,6 +57,7 @@ public interface QuestionMapper {
 
     /**
      * 根据用户id获取问题对象
+     *
      * @param id
      * @return
      */
@@ -60,6 +66,7 @@ public interface QuestionMapper {
 
     /**
      * 修改问题
+     *
      * @param question
      */
     @Update("update question set title = #{title},description = #{description},tag = #{tag},modified_time = #{modifiedTime} where id = #{id}")
@@ -67,13 +74,15 @@ public interface QuestionMapper {
 
     /**
      * 更新评论数+1
+     *
      * @param id
      */
     @Update("update question set comment_count = comment_count +1 where id = #{id}")
-    void updateQuestionCommentCount(@Param("id")Integer id);
+    void updateQuestionCommentCount(@Param("id") Integer id);
 
     /**
      * 更细查看数+1
+     *
      * @param id
      */
     @Update("update question set view_count = view_count + 1 where id = #{id}")

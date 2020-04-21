@@ -16,13 +16,13 @@ public class HelloController {
 
     @ResponseBody
     @RequestMapping("hello")
-    public String hello(){
+    public String hello() {
         return "hello springboot !!!";
     }
 
     @RequestMapping("success")
-    public String success(Map<String,String> map){
-        map.put("yao","jikai");
+    public String success(Map<String, String> map) {
+        map.put("yao", "jikai");
         return "success";
     }
 }

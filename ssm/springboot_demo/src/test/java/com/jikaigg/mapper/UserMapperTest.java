@@ -16,7 +16,7 @@ public class UserMapperTest {
     private UserMapper userMapper;
 
     @Test
-    public void testQuery(){
+    public void testQuery() {
         User user = userMapper.selectByPrimaryKey(41);
         System.out.println(user);
         List<User> users = userMapper.selectAll();

@@ -9,11 +9,14 @@ import com.jikaigg.Mybatis.sqlsession.SqlSessionFactory;
  */
 public class SqlSessionFactoryImpl implements SqlSessionFactory {
     private Configuration cfg;
-    public SqlSessionFactoryImpl(Configuration cfg){
+
+    public SqlSessionFactoryImpl(Configuration cfg) {
         this.cfg = cfg;
     }
+
     /**
      * 用于创建一个新的操作数据库对象
+     *
      * @return
      */
     @Override

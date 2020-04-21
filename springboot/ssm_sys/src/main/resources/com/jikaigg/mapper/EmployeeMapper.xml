@@ -4,18 +4,19 @@
 <mapper namespace="com.jikaigg.mapper.EmployeeMapper">
 
     <resultMap id="employee1" type="com.jikaigg.domain.Employee">
-        <id  property = "empId" column = "emp_id" />
-        <result property = "empName" column = "emp_name" />
-        <result property = "empEmail" column = "emp_email" />
-        <result property = "gender" column = "gender" />
-        <result property = "departmentId" column = "department_id" />
+        <id property="empId" column="emp_id"/>
+        <result property="empName" column="emp_name"/>
+        <result property="empEmail" column="emp_email"/>
+        <result property="gender" column="gender"/>
+        <result property="departmentId" column="department_id"/>
         <association property="department" column="department_id" javaType="com.jikaigg.domain.Department">
-            <id property="deptId" column="dept_id" />
-            <result property="deptName" column="dept_name" />
-            <result property="deptLeader" column="dept_leader" />
+            <id property="deptId" column="dept_id"/>
+            <result property="deptName" column="dept_name"/>
+            <result property="deptLeader" column="dept_leader"/>
         </association>
     </resultMap>
     <select id="selectLimitAndOffset" resultMap="employee1">
-        select e.emp_id,e.emp_name,e.emp_email,e.gender,e.department_id,d.dept_name,d.dept_leader from tbl_emp e left join tbl_dept d on e.department_id = d.dept_id order by emp_id limit #{limit},#{offset}
+        select e.emp_id,e.emp_name,e.emp_email,e.gender,e.department_id,d.dept_name,d.dept_leader from tbl_emp e left
+        join tbl_dept d on e.department_id = d.dept_id order by emp_id limit #{limit},#{offset}
     </select>
 </mapper>

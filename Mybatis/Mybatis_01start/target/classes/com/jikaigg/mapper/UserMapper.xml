@@ -22,13 +22,14 @@
         where emp_id = #{id}
     </update>
     <insert id="insertOne" parameterType="com.jikaigg.domain.User">
-        insert into tbl_emp(emp_name,emp_email,gender,department_id) values(#{emp_name},#{emp_email},#{gender},#{department_id})
+        insert into tbl_emp(emp_name,emp_email,gender,department_id)
+        values(#{emp_name},#{emp_email},#{gender},#{department_id})
     </insert>
 
     <select id="selectIn" parameterType="map" resultType="com.jikaigg.domain.User">
         select * from tbl_emp
         <where>
-            department_id  in
+            department_id in
             <foreach collection="ids" item="id" separator="," open="(" close=")">
                 #{id}
             </foreach>

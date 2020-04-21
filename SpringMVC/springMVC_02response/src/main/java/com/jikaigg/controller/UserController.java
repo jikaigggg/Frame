@@ -19,24 +19,26 @@ public class UserController {
 
     /**
      * 返回字符串
+     *
      * @param model
      * @return
      */
     @RequestMapping("testString")
-    public String testString(Model model){
+    public String testString(Model model) {
         System.out.println("testString执行了...");
         //模拟从数据库中查询User数据
         User user = new User();
         user.setName("yaojikai");
         user.setPassword("123456");
         user.setAge(18);
-        model.addAttribute("user",user);
+        model.addAttribute("user", user);
 
         return "success";
     }
 
     /**
      * 无返回值
+     *
      * @return
      */
     @RequestMapping("testVoid")
@@ -54,7 +56,7 @@ public class UserController {
     }
 
     @RequestMapping("testModelAndView")
-    public ModelAndView testModelAndView(Model model){
+    public ModelAndView testModelAndView(Model model) {
         ModelAndView modelAndView = new ModelAndView();
         System.out.println("testModelAndView执行了...");
         //模拟从数据库中查询User数据
@@ -63,7 +65,7 @@ public class UserController {
         user.setPassword("123456");
         user.setAge(18);
         // 把user对象存储到modelAndView中，也会把user对象存入到request域中
-        modelAndView.addObject("user",user);
+        modelAndView.addObject("user", user);
         //指定跳转到哪个页面
         modelAndView.setViewName("success");
         return modelAndView;
@@ -71,11 +73,12 @@ public class UserController {
 
     /**
      * 使用关键字的方式进行转发和重定向
+     *
      * @param model
      * @return
      */
     @RequestMapping("testForwardOrRedirect")
-    public String testForwardOrRedirect(Model model){
+    public String testForwardOrRedirect(Model model) {
         System.out.println("testForwardOrRedirect执行了...");
         // 转发
         //return "forward:/WEB-INF/pages/success.jsp";
@@ -87,7 +90,8 @@ public class UserController {
      * 模拟异步请求与响应
      */
     @RequestMapping("testAjax")
-    public @ResponseBody User testAjax(@RequestBody User user){
+    public @ResponseBody
+    User testAjax(@RequestBody User user) {
         System.out.println("testAjax执行了...");
         //客户端发送的ajax请求，传的是json的字符串，后端已经把json字符串风转到user对象中
         System.out.println(user);

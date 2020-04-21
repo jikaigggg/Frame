@@ -11,12 +11,12 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 public class HttpDemoApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(HttpDemoApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(HttpDemoApplication.class, args);
+    }
 
-	@Bean
-	public RestTemplate restTemplate() {
-		return new RestTemplate();
-	}
+    @Bean
+    public RestTemplate restTemplate() {
+        return new RestTemplate();
+    }
 }

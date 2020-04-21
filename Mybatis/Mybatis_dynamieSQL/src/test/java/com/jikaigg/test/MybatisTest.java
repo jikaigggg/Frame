@@ -23,6 +23,7 @@ public class MybatisTest {
 
     /**
      * 初始化是执行
+     *
      * @throws IOException
      */
     @Before //用于在测试方法执行之前执行
@@ -39,6 +40,7 @@ public class MybatisTest {
         userDao = session.getMapper(UserDao.class);
 
     }
+
     /**
      * 结束时执行
      */
@@ -54,7 +56,7 @@ public class MybatisTest {
      * 测试查询所有
      */
     @Test
-    public void testFindAll(){
+    public void testFindAll() {
 
         //5.使用代理对象执行方法
         List<User> users = userDao.findAll();
@@ -68,15 +70,16 @@ public class MybatisTest {
      * 测试根据id查询用户信息
      */
     @Test
-    public void testFindById(){
+    public void testFindById() {
         User user = userDao.findById(48);
         System.out.println(user);
     }
+
     /**
      * 测试根据username模糊查询用户信息
      */
     @Test
-    public void testFindByName(){
+    public void testFindByName() {
         // 对应#{username}方式
         List<User> list = userDao.findByName("%二%");
         // 对应'%${value}%'方式
@@ -90,7 +93,7 @@ public class MybatisTest {
      * 测试根据条件查询用户信息
      */
     @Test
-    public void testFindByCondition(){
+    public void testFindByCondition() {
         User user = new User();
         user.setUsername("老王");
         List<User> users = userDao.findUserByCondition(user);
@@ -100,7 +103,7 @@ public class MybatisTest {
     }
 
     @Test
-    public void findUserInIds(){
+    public void findUserInIds() {
         QueryVo vo = new QueryVo();
         List<Integer> list = new ArrayList<Integer>();
         list.add(41);

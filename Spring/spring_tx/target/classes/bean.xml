@@ -13,7 +13,7 @@
 
     <bean id="accountService" class="com.jikaigg.service.impl.AccountServiceImpl">
         <property name="accountDao" ref="accountDao"></property>
-     </bean>
+    </bean>
 
 
     <!--配置持久层-->
@@ -29,7 +29,7 @@
         <property name="password" value="123456"></property>
     </bean>
 
-<!--spring中基于XML的声明式事务控制-->
+    <!--spring中基于XML的声明式事务控制-->
     <!--1配置事务管理器-->
     <bean id="transectionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="ds"></property>

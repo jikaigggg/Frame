@@ -15,6 +15,6 @@ new Vue({
   el: '#app',
   //配置路由
   router,
-  components: { App },
+  components: {App},
   template: '<App/>'
 })

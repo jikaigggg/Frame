@@ -83,7 +83,7 @@ public class EmployeeMapperTest {
     }
 
     @Test
-    public void testCount(){
+    public void testCount() {
         int i = employeeMapper.countEmps();
         System.out.println(i);
     }

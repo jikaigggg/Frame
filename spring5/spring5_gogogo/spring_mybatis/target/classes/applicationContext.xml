@@ -8,27 +8,27 @@
 
     <!--DataSource使用spriong的数据源替换mybatis的配置-->
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-        <property name="url" value="jdbc:mysql://localhost:3306/jikaigg?serverTimeZone=GMT%2b8&amp;useSSL=false" />
-        <property name="username" value="root" />
-        <property name="password" value="123456" />
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/jikaigg?serverTimeZone=GMT%2b8&amp;useSSL=false"/>
+        <property name="username" value="root"/>
+        <property name="password" value="123456"/>
     </bean>
 
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <property name="dataSource" ref="dataSource" />
-        <property name="mapperLocations" value="classpath:com/jikaigg/mapper/*.xml" />
+        <property name="dataSource" ref="dataSource"/>
+        <property name="mapperLocations" value="classpath:com/jikaigg/mapper/*.xml"/>
     </bean>
 
     <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
-        <constructor-arg index="0" ref="sqlSessionFactory" />
+        <constructor-arg index="0" ref="sqlSessionFactory"/>
     </bean>
 
     <bean id="employeeMapper" class="com.jikaigg.mapper.impl.EmployeeMapperImpl">
-        <property name="sqlSession" ref="sqlSession" />
+        <property name="sqlSession" ref="sqlSession"/>
     </bean>
 
     <bean id="deptMapper" class="com.jikaigg.mapper.impl.DeptMapperImpl">
-        <property name="sqlSessionFactory" ref="sqlSessionFactory" />
+        <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
     </bean>
 
 </beans>

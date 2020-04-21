@@ -10,15 +10,15 @@ import java.util.List;
 public class AccountDapImpl extends JdbcDaoSupport implements AccountDao {
     public Account findAccountById(Integer id) {
         List<Account> accounts = getJdbcTemplate().query("select * from account where id = ?", new BeanPropertyRowMapper<Account>(Account.class), id);
-        return accounts.isEmpty()?null:accounts.get(0);
+        return accounts.isEmpty() ? null : accounts.get(0);
     }
 
     public Account findAccountByName(String name) {
         List<Account> accounts = getJdbcTemplate().query("select * from account where name = ?", new BeanPropertyRowMapper<Account>(Account.class), name);
-        if (accounts.isEmpty()){
+        if (accounts.isEmpty()) {
             return null;
         }
-        if (accounts.size()>1){
+        if (accounts.size() > 1) {
             throw new RuntimeException("结果集不唯一");
         }
 
@@ -26,6 +26,6 @@ public class AccountDapImpl extends JdbcDaoSupport implements AccountDao {
     }
 
     public void updateAccount(Account account) {
-        getJdbcTemplate().update("update account set name = ?,money = ? where id = ?",account.getName(),account.getMoney(),account.getId());
+        getJdbcTemplate().update("update account set name = ?,money = ? where id = ?", account.getName(), account.getMoney(), account.getId());
     }
 }

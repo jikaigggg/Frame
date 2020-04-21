@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class FormController {
     @PostMapping("f1")
-    public String test1(@RequestParam("name") String name, Model model){
+    public String test1(@RequestParam("name") String name, Model model) {
         System.out.println(name);
-        model.addAttribute("msg",name);
+        model.addAttribute("msg", name);
         return "hello";
     }
 

@@ -9,7 +9,7 @@ import javax.xml.ws.RequestWrapper;
 @Controller
 public class IndexController {
     @RequestMapping("/index")
-    public String index(){
+    public String index() {
         return "index";
     }
 }

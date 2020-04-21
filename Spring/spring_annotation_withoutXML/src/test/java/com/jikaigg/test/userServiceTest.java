@@ -18,23 +18,25 @@ public class userServiceTest {
     @Test
     public void findAll() {
         ApplicationContext as = new AnnotationConfigApplicationContext(SpringConfigration.class);
-        UserService service = as.getBean("userService",UserService.class);
+        UserService service = as.getBean("userService", UserService.class);
         List<Account> accounts = service.findAll();
         for (Account account : accounts) {
             System.out.println(account);
         }
     }
+
     @Test
     public void findAccountById() {
         ApplicationContext as = new AnnotationConfigApplicationContext(SpringConfigration.class);
-        UserService service = as.getBean("userService",UserService.class);
+        UserService service = as.getBean("userService", UserService.class);
         Account account = service.findAccountById(2);
         System.out.println(account);
     }
+
     @Test
     public void insertAccount() {
         ApplicationContext as = new AnnotationConfigApplicationContext(SpringConfigration.class);
-        UserService service = as.getBean("userService",UserService.class);
+        UserService service = as.getBean("userService", UserService.class);
         Account account = new Account();
         account.setName("xinzhizhu");
         account.setMoney(10f);
@@ -44,22 +46,23 @@ public class userServiceTest {
     @Test
     public void updateAccount() {
         ApplicationContext as = new AnnotationConfigApplicationContext(SpringConfigration.class);
-        UserService service = as.getBean("userService",UserService.class);
+        UserService service = as.getBean("userService", UserService.class);
         Account account = new Account();
         account.setId(4);
         account.setName("yeyuanxinzhizhu");
         account.setMoney(10.5f);
         service.updateAccount(account);
     }
+
     @Test
-    public void deleteAccount(){
+    public void deleteAccount() {
         ApplicationContext as = new AnnotationConfigApplicationContext(SpringConfigration.class);
         UserService service = as.getBean("userService", UserService.class);
         service.deleteAccount(4);
     }
 
     @Test
-    public void accountScope(){
+    public void accountScope() {
         ApplicationContext ac = new AnnotationConfigApplicationContext(SpringConfigration.class);
         QueryRunner runner1 = ac.getBean("runner", QueryRunner.class);
         QueryRunner runner2 = ac.getBean("runner", QueryRunner.class);

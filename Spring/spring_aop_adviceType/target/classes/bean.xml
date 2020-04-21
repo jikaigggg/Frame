@@ -19,7 +19,8 @@
             <!--配置前置通知-->
             <aop:before method="beforePrintLog" pointcut="execution(* *..*.*(..))"></aop:before>
             <!--配置后置通知-->
-            <aop:after-returning method="afterReturningPrintLog" pointcut="execution(* *..*.*(..))"></aop:after-returning>
+            <aop:after-returning method="afterReturningPrintLog"
+                                 pointcut="execution(* *..*.*(..))"></aop:after-returning>
             <!--配置异常通知-->
             <aop:after-throwing method="afterThrowingPrintLog" pointcut="execution(* *..*.*(..))"></aop:after-throwing>
             <!--配置最终通知-->

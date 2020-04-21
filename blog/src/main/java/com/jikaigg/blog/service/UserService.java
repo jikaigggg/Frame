@@ -13,13 +13,13 @@ public class UserService {
     public void createOrUpdate(User user) {
         System.out.println("1111");
         User dbUser = userMapper.findByAccountId(user.getAccountId());
-        if (dbUser == null){
+        if (dbUser == null) {
             user.setCreateTime(System.currentTimeMillis());
             user.setModifiedTime(user.getCreateTime());
             //插入新用户
             userMapper.inserUser(user);
 
-        }else {
+        } else {
             //更新用户
             dbUser.setModifiedTime(System.currentTimeMillis());
             dbUser.setAvatarUrl(user.getAvatarUrl());

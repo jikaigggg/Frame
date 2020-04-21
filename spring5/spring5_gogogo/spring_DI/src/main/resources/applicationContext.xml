@@ -8,9 +8,9 @@
 
     <bean id="student" class="com.jikaigg.pojo.Student">
         <!--第一种注入，普通类型值注入-->
-        <property name="name" value="yaojikai" />
+        <property name="name" value="yaojikai"/>
         <!--第二种注入，对象注入(bean注入)-->
-        <property name="address" ref="address" />
+        <property name="address" ref="address"/>
         <!--第三种注入，String数组注入-->
         <property name="books">
             <array>
@@ -31,8 +31,8 @@
         <!--第五种注入，Map注入-->
         <property name="card">
             <map>
-                <entry key="身份证" value="130282199509170017" />
-                <entry key="银行卡" value="62185599897736" />
+                <entry key="身份证" value="130282199509170017"/>
+                <entry key="银行卡" value="62185599897736"/>
             </map>
         </property>
         <!--第六种注入，set注入-->
@@ -56,11 +56,11 @@
     </bean>
 
     <bean id="address" class="com.jikaigg.pojo.Address">
-        <property name="address" value="唐山" />
+        <property name="address" value="唐山"/>
     </bean>
 
     <!--p命名空间注入，对应properties-->
-<!--    <bean id="user" class="com.jikaigg.pojo.User" p:username="yaojikai" p:password="123456"  />-->
+    <!--    <bean id="user" class="com.jikaigg.pojo.User" p:username="yaojikai" p:password="123456"  />-->
     <!--c命名空间注入，对应constructor-org-->
     <bean id="user" class="com.jikaigg.pojo.User" c:_0="yaojikai" c:_1="123456"/>
 

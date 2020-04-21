@@ -8,7 +8,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Client {
     /**
      * 获取spring的Ioc核心容器对象，并根据id获取对象
-     *
      */
     public static void main(String[] args) {
         //第一种加载方式

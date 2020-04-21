@@ -7,14 +7,14 @@ import Main from '../views/Main'
 Vue.use(VueRouter);
 
 export default new VueRouter({
-  routes:[
+  routes: [
     {
-      path:'/main',
-      componen:Main
+      path: '/main',
+      componen: Main
     },
     {
-      path:'/login',
-      component:Login
+      path: '/login',
+      component: Login
     }
   ]
 })

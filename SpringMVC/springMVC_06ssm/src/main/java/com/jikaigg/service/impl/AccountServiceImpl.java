@@ -12,6 +12,7 @@ import java.util.List;
 public class AccountServiceImpl implements AccountService {
     @Autowired
     private AccountDao accountDao;
+
     @Override
     public List<Account> findAll() {
         System.out.println("业务层查询所有账户信息");

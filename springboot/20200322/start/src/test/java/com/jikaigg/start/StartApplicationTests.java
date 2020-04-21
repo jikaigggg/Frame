@@ -8,6 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class StartApplicationTests {
     Logger logger = LoggerFactory.getLogger(getClass());
+
     @Test
     public void contextLoads() {
 

@@ -11,7 +11,7 @@
     <title>Title</title>
 </head>
 <body>
-<h3> <a href="/anno/requestparam" methods="GET">paramTest</a> </h3>
+<h3><a href="/anno/requestparam" methods="GET">paramTest</a></h3>
 
 <form action="/anno/requestbody" method="post">
     姓名：<input type="text" name="username"><br>
@@ -19,7 +19,7 @@
     <input type="submit" value="提交">
 </form>
 
-<h3> <a href="/anno/pathVariable/10" methods="GET">pathVariable</a> </h3>
+<h3><a href="/anno/pathVariable/10" methods="GET">pathVariable</a></h3>
 
 </body>
 </html>

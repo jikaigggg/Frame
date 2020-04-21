@@ -8,7 +8,7 @@ public class Configuration {
     private String url;
     private String username;
     private String password;
-    private Map<String,Mapper> mappers = new HashMap<String, Mapper>();
+    private Map<String, Mapper> mappers = new HashMap<String, Mapper>();
 
     public String getDriver() {
         return driver;

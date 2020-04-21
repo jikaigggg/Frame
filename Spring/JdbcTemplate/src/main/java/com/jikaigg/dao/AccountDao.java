@@ -8,6 +8,7 @@ import com.jikaigg.domain.Account;
 public interface AccountDao {
     /**
      * 根据id查询
+     *
      * @param id
      * @return
      */
@@ -15,6 +16,7 @@ public interface AccountDao {
 
     /**
      * 根据name查询
+     *
      * @param name
      * @return
      */
@@ -22,6 +24,7 @@ public interface AccountDao {
 
     /**
      * 更新账户
+     *
      * @param account
      */
     void updateAccount(Account account);

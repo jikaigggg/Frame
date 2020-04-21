@@ -8,6 +8,7 @@ import com.jikaigg.domain.Account;
 public interface AccountService {
     /**
      * 通过id查询账户信息
+     *
      * @param id
      * @return
      */
@@ -15,6 +16,7 @@ public interface AccountService {
 
     /**
      * 通过name查询账户信息
+     *
      * @param name
      * @return
      */
@@ -22,9 +24,10 @@ public interface AccountService {
 
     /**
      * 转账
+     *
      * @param sourceName
      * @param targetName
      * @param money
      */
-    void transfer(String sourceName,String targetName,Float money);
+    void transfer(String sourceName, String targetName, Float money);
 }

@@ -24,7 +24,7 @@
     </update>
 
     <!--删除用户-->
-    <delete id="deleteUser" parameterType="java.lang.Integer" >
+    <delete id="deleteUser" parameterType="java.lang.Integer">
         delete from user where id=#{id};
     </delete>
 

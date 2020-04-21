@@ -6,7 +6,7 @@ package com.jikaigg.pojo;
 public class User {
     private String name;
 
-    public User(){
+    public User() {
         System.out.println("无参构造方法运行");
     }
 
@@ -18,7 +18,7 @@ public class User {
         this.name = name;
     }
 
-    public void show(){
-        System.out.println("name"+name);
+    public void show() {
+        System.out.println("name" + name);
     }
 }

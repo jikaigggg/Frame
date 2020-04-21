@@ -3,7 +3,7 @@ package com.jikaigg.utils;
 import org.aspectj.lang.ProceedingJoinPoint;
 
 public class advice {
-    public Object aroundPrintLog(ProceedingJoinPoint pjp){
+    public Object aroundPrintLog(ProceedingJoinPoint pjp) {
         Object rtValue = null;
         try {
             Object[] args = pjp.getArgs();  //得到方法执行所需的参数
@@ -14,7 +14,7 @@ public class advice {
         } catch (Throwable throwable) {
             System.out.println("环绕通知Logger类中的aroundPrintLog方法开始记录日志了--异常");
             throw new RuntimeException(throwable);
-        }finally {
+        } finally {
             System.out.println("环绕通知Logger类中的aroundPrintLog方法开始记录日志了--最终");
 
         }

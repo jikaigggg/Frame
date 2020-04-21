@@ -13,8 +13,8 @@ public class ProxyInvocationHandler implements InvocationHandler {
         this.rent = rent;
     }
 
-    public Object getProxy(){
-        return Proxy.newProxyInstance(this.getClass().getClassLoader(),rent.getClass().getInterfaces(),this);
+    public Object getProxy() {
+        return Proxy.newProxyInstance(this.getClass().getClassLoader(), rent.getClass().getInterfaces(), this);
     }
 
     //处理代理实例，并返回结果

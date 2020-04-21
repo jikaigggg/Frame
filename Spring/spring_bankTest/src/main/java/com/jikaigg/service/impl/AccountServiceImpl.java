@@ -15,8 +15,8 @@ public class AccountServiceImpl implements AccountService {
     public void transfer(String huaqian, String shouqian, Float money) {
         Account hua = accountDao.findByName(huaqian);
         Account shou = accountDao.findByName(shouqian);
-        hua.setMoney(hua.getMoney()-money);
-        shou.setMoney(shou.getMoney()+money);
+        hua.setMoney(hua.getMoney() - money);
+        shou.setMoney(shou.getMoney() + money);
         accountDao.updateAccount(hua);
         accountDao.updateAccount(shou);
     }

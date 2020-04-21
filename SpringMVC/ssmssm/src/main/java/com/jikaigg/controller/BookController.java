@@ -16,9 +16,9 @@ public class BookController {
     private BookService bookService;
 
     @RequestMapping("allbook")
-    public String list(Model model){
+    public String list(Model model) {
         List<Books> all = bookService.findAll();
-        model.addAttribute("list",all);
+        model.addAttribute("list", all);
 
         return "allbook";
     }

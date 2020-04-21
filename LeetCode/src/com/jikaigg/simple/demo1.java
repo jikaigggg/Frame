@@ -51,7 +51,7 @@ public class demo1 {
                 return map.get(target - nums[i]) + "---" + i;
             }
             //将当前的值，索引号put进map
-            map.put(nums[i],i);
+            map.put(nums[i], i);
         }
         return "无匹配";
     }

@@ -20,19 +20,21 @@ import java.util.List;
 public class AccountController {
     @Autowired
     private AccountService accountService;
+
     @RequestMapping("findAll")
-    public String findAll(Model model){
+    public String findAll(Model model) {
         //System.out.println("表现层查询所有账户信息");
         //调用service方法
         List<Account> all = accountService.findAll();
-        model.addAttribute("all",all);
+        model.addAttribute("all", all);
         return "list";
     }
+
     @RequestMapping("saveAccount")
     public void saveAccount(Account account, HttpServletRequest request, HttpServletResponse response) throws IOException {
         //System.out.println("表现层保存账户信息");
         //调用service方法
         accountService.saveAccount(account);
-        response.sendRedirect(request.getContextPath()+"/account/findAll");
+        response.sendRedirect(request.getContextPath() + "/account/findAll");
     }
 }

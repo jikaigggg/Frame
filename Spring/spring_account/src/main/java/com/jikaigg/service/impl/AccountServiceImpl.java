@@ -9,7 +9,7 @@ import java.util.List;
 
 /**
  * 账户的业务层实现类
- *
+ * <p>
  * 事务及控制应该都是在业务层
  */
 public class AccountServiceImpl implements AccountService {
@@ -27,7 +27,7 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public List<Account> findAllAccount() {
-        try{
+        try {
             //1.开启事务
             txManager.beginTransaction();
 
@@ -40,11 +40,11 @@ public class AccountServiceImpl implements AccountService {
             //4.返回结果
             return accounts;
 
-        }catch(Exception e){
+        } catch (Exception e) {
             //5.回滚事务
             txManager.rollback();
             throw new RuntimeException(e);
-        }finally {
+        } finally {
             //6.释放连接
             txManager.release();
         }
@@ -52,12 +52,12 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public Account findAccountById(Integer accountId) {
-        try{
+        try {
             //1.开启事务
             txManager.beginTransaction();
 
             //2.执行操作
-            Account account =  accountDao.findAccountById(accountId);
+            Account account = accountDao.findAccountById(accountId);
 
             //3.提交事务
             txManager.commit();
@@ -65,12 +65,12 @@ public class AccountServiceImpl implements AccountService {
             //4.返回结果
             return account;
 
-        }catch(Exception e){
+        } catch (Exception e) {
             //5.回滚事务
             txManager.rollback();
             throw new RuntimeException(e);
 
-        }finally {
+        } finally {
             //6.释放连接
             txManager.release();
         }
@@ -78,7 +78,7 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public void saveAccount(Account account) {
-        try{
+        try {
             //1.开启事务
             txManager.beginTransaction();
 
@@ -90,11 +90,11 @@ public class AccountServiceImpl implements AccountService {
 
             //4.返回结果
 
-        }catch(Exception e){
+        } catch (Exception e) {
             //5.回滚事务
             txManager.rollback();
 
-        }finally {
+        } finally {
             //6.释放连接
             txManager.release();
         }
@@ -103,7 +103,7 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public void updateAccount(Account account) {
-        try{
+        try {
             //1.开启事务
             txManager.beginTransaction();
 
@@ -115,11 +115,11 @@ public class AccountServiceImpl implements AccountService {
 
             //4.返回结果
 
-        }catch(Exception e){
+        } catch (Exception e) {
             //5.回滚事务
             txManager.rollback();
 
-        }finally {
+        } finally {
             //6.释放连接
             txManager.release();
         }
@@ -128,7 +128,7 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public void deleteAccount(Integer acccountId) {
-        try{
+        try {
             //1.开启事务
             txManager.beginTransaction();
 
@@ -140,11 +140,11 @@ public class AccountServiceImpl implements AccountService {
 
             //4.返回结果
 
-        }catch(Exception e){
+        } catch (Exception e) {
             //5.回滚事务
             txManager.rollback();
 
-        }finally {
+        } finally {
             //6.释放连接
             txManager.release();
         }
@@ -153,7 +153,7 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public void transfer(String sourceName, String targetName, Float money) {
-        try{
+        try {
             //1.开启事务
             txManager.beginTransaction();
 
@@ -173,7 +173,7 @@ public class AccountServiceImpl implements AccountService {
             //2.5.更新转出账户
             accountDao.updateAccount(source);
 
-            int i = 1/0;
+            int i = 1 / 0;
 
             //2.6.更新转入账户
             accountDao.updateAccount(target);
@@ -183,12 +183,12 @@ public class AccountServiceImpl implements AccountService {
 
             //4.返回结果
 
-        }catch(Exception e){
+        } catch (Exception e) {
             //5.回滚事务
             txManager.rollback();
             e.printStackTrace();
 
-        }finally {
+        } finally {
             //6.释放连接
             txManager.release();
         }

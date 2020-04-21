@@ -17,20 +17,20 @@ import java.util.Map;
 public class DruidConfig {
     @ConfigurationProperties(prefix = "spring.datasource")
     @Bean
-    public DataSource druid(){
+    public DataSource druid() {
         return new DruidDataSource();
     }
 
     //配置Druid监控
     //1、配置一个管理后台的Servlet
     @Bean
-    public ServletRegistrationBean statViewServlet(){
+    public ServletRegistrationBean statViewServlet() {
         ServletRegistrationBean bean = new ServletRegistrationBean(new StatViewServlet(), "/druid/*");
-        Map<String,String> initParams = new HashMap<String,String>();
-        initParams.put("loginUsername","admin");
-        initParams.put("loginPassword","123456");
-        initParams.put("allow","");
-        initParams.put("deny","192.168.15.21");
+        Map<String, String> initParams = new HashMap<String, String>();
+        initParams.put("loginUsername", "admin");
+        initParams.put("loginPassword", "123456");
+        initParams.put("allow", "");
+        initParams.put("deny", "192.168.15.21");
 
         bean.setInitParameters(initParams);
 
@@ -39,10 +39,10 @@ public class DruidConfig {
 
     //2、配置一个web监控的filter
     @Bean
-    public FilterRegistrationBean webStatFilter(){
+    public FilterRegistrationBean webStatFilter() {
         FilterRegistrationBean bean = new FilterRegistrationBean();
-        Map<String,String> initParams = new HashMap<String,String>();
-        initParams.put("exclusions","*.js,*.css,/druid/*");
+        Map<String, String> initParams = new HashMap<String, String>();
+        initParams.put("exclusions", "*.js,*.css,/druid/*");
         bean.setInitParameters(initParams);
         bean.setUrlPatterns(Arrays.asList("/*"));
 

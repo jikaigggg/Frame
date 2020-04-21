@@ -22,21 +22,22 @@
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
 <script type="text/javascript">
     /*slot定义插槽*/
-    Vue.component("todo",{template:
-        '<div>'+
-            '<slot name="todo-title"></slot>'+
-                '<ul>'+
-                    '<slot name="todo-items"></slot>'+
-                '</ul>'+
-        '</div>'
+    Vue.component("todo", {
+        template:
+            '<div>' +
+            '<slot name="todo-title"></slot>' +
+            '<ul>' +
+            '<slot name="todo-items"></slot>' +
+            '</ul>' +
+            '</div>'
     });
-    Vue.component("todo-title",{
-        props:['title'],
+    Vue.component("todo-title", {
+        props: ['title'],
         template:
             '<div>{{title}}</div>'
     });
-    Vue.component("todo-items",{
-        props:['item'],
+    Vue.component("todo-items", {
+        props: ['item'],
         template:
             '<li>{{item}}</li>'
     });
@@ -44,9 +45,9 @@
 
     var vm = new Vue({
         el: '#app',
-        data:{
-            title:"书籍列表",
-            items:["么济恺","爱","石梦宇"]
+        data: {
+            title: "书籍列表",
+            items: ["么济恺", "爱", "石梦宇"]
 
         }
     });

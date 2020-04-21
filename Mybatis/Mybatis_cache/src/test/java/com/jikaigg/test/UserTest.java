@@ -35,7 +35,7 @@ public class UserTest {
         factory = builder.build(in);
 
         //3.使用代理对象创建dao对象
-        session= factory.openSession();
+        session = factory.openSession();
         userDao = session.getMapper(UserDao.class);
 
     }
@@ -56,7 +56,7 @@ public class UserTest {
      * 测试以及缓存
      */
     @Test
-    public void testFirstLevelCache(){
+    public void testFirstLevelCache() {
         User user1 = userDao.findById(41);
         System.out.println(user1);
 /*        session.close();
@@ -69,7 +69,7 @@ public class UserTest {
     }
 
     @Test
-    public void testFirstClearCache(){
+    public void testFirstClearCache() {
         User user1 = userDao.findById(52);
         System.out.println(user1);
         //更新用户信息

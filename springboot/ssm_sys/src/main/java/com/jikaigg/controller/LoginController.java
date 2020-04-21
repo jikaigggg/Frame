@@ -25,7 +25,8 @@ public class LoginController implements Serializable {
     }
 
     @RequestMapping("testAjax")
-    public @ResponseBody int testAjax(@RequestBody Employee employee){
+    public @ResponseBody
+    int testAjax(@RequestBody Employee employee) {
         System.out.println("testAjax执行了...");
         //客户端发送的ajax请求，传的是json的字符串，后端已经把json字符串风转到user对象中
         System.out.println(employee);

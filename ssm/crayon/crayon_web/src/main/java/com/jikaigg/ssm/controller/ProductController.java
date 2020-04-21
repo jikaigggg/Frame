@@ -16,10 +16,10 @@ public class ProductController {
     private ProductService productService;
 
     @RequestMapping("findAll.do")
-    public ModelAndView findAll() throws Exception{
+    public ModelAndView findAll() throws Exception {
         ModelAndView mv = new ModelAndView();
         List<Product> products = productService.findAll();
-        mv.addObject("productList",products);
+        mv.addObject("productList", products);
         mv.setViewName("product-list.jsp");
         return mv;
 

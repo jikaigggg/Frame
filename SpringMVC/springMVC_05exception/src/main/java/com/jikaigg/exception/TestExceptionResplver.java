@@ -11,15 +11,15 @@ public class TestExceptionResplver implements HandlerExceptionResolver {
     public ModelAndView resolveException(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, Exception e) {
         //获取到异常对象
         TestException t = null;
-        if (e instanceof TestException){
-            t = (TestException)e;
-        }else {
+        if (e instanceof TestException) {
+            t = (TestException) e;
+        } else {
             e = new TestException("系统正在维护。。。");
         }
 
         //创建ModelAndView对象
         ModelAndView mv = new ModelAndView();
-        mv.addObject("errorMsg",e.getMessage());
+        mv.addObject("errorMsg", e.getMessage());
         mv.setViewName("error");
         return mv;
     }

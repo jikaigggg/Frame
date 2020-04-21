@@ -15,9 +15,10 @@ class SpringbootStartApplicationTests {
 
     @Autowired
     private Person person;
+
     @Test
     void contextLoads() {
-        System.out.println(UUID.randomUUID().toString().replace("-",""));
+        System.out.println(UUID.randomUUID().toString().replace("-", ""));
         System.out.println(person);
     }
 

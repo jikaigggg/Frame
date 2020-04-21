@@ -13,6 +13,7 @@ import java.util.List;
 public class MybatisTest {
     /**
      * 入门案例
+     *
      * @param args
      */
     public static void main(String[] args) throws Exception {

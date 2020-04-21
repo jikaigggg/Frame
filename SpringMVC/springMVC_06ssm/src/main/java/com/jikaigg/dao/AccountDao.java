@@ -14,6 +14,7 @@ import java.util.List;
 public interface AccountDao {
     /**
      * 查询所有
+     *
      * @return
      */
     @Select("select * from account")
@@ -21,6 +22,7 @@ public interface AccountDao {
 
     /**
      * 保存账户信息
+     *
      * @param account
      */
     @Insert("insert into account(name,money) values(#{name},#{money})")

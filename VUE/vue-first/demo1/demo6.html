@@ -15,15 +15,15 @@
 <script type="text/javascript">
     var vm = new Vue({
         el: '#app',
-        data:{message:"yaojikai"},
+        data: {message: "yaojikai"},
         methods: {
-            currentTime1:function () {
+            currentTime1: function () {
                 return Date.now();
             }
         },
         /*计算属性，相当于缓存，浏览器控制台中调用，始终显示一个时间，而方法每次都会刷新，占用内存*/
-        computed:{
-            currentTime2:function () {
+        computed: {
+            currentTime2: function () {
                 return Date.now();
             }
         }

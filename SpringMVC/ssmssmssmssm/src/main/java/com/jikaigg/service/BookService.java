@@ -7,6 +7,7 @@ import java.util.List;
 public interface BookService {
     /**
      * 增加一本书
+     *
      * @param books
      * @return
      */
@@ -14,6 +15,7 @@ public interface BookService {
 
     /**
      * 删除一本书
+     *
      * @param id
      * @return
      */
@@ -21,6 +23,7 @@ public interface BookService {
 
     /**
      * 更新一本书
+     *
      * @param books
      * @return
      */
@@ -28,6 +31,7 @@ public interface BookService {
 
     /**
      * 根据id查询一本书
+     *
      * @param id
      * @return
      */
@@ -35,12 +39,14 @@ public interface BookService {
 
     /**
      * 查询所有书
+     *
      * @return
      */
     List<Books> findAll();
 
     /**
      * 根据name查书
+     *
      * @return
      */
     Books queryBookByName(String name);

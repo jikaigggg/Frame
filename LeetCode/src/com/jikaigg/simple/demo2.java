@@ -17,10 +17,10 @@ public class demo2 {
             array.add(nums.charAt(i));
         }
         System.out.println(array);
-        for (int i = array.size()-1; i >= 0; i--) {
-            int aaa = (int)array.get(i);
+        for (int i = array.size() - 1; i >= 0; i--) {
+            int aaa = (int) array.get(i);
             System.out.println(aaa);
-            System.out.println(aaa*Math.pow(10,i));
+            System.out.println(aaa * Math.pow(10, i));
         }
 
     }

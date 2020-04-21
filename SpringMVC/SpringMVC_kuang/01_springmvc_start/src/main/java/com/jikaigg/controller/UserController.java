@@ -20,10 +20,10 @@ public class UserController {
     public String json1() throws JsonProcessingException {
         ObjectMapper objectMapper = new ObjectMapper();
         List<User> users = new ArrayList<User>();
-        User user1  = new User("yaojikai1",18,"男");
-        User user2  = new User("yaojikai2",18,"男");
-        User user3  = new User("yaojikai3",18,"男");
-        User user4  = new User("yaojikai4",18,"男");
+        User user1 = new User("yaojikai1", 18, "男");
+        User user2 = new User("yaojikai2", 18, "男");
+        User user3 = new User("yaojikai3", 18, "男");
+        User user4 = new User("yaojikai4", 18, "男");
         users.add(user1);
         users.add(user2);
         users.add(user3);
@@ -35,23 +35,24 @@ public class UserController {
 
     @RequestMapping("a2")
     @ResponseBody
-    public List<User> a2(){
+    public List<User> a2() {
         List<User> users = new ArrayList<User>();
-        users.add(new User("yaojikai",18,"男"));
-        users.add(new User("shimengyu",18,"女"));
-        users.add(new User("xiaoxin",18,"男"));
-        users.add(new User("fengjian",18,"男"));
+        users.add(new User("yaojikai", 18, "男"));
+        users.add(new User("shimengyu", 18, "女"));
+        users.add(new User("xiaoxin", 18, "男"));
+        users.add(new User("fengjian", 18, "男"));
         return users;
     }
+
     @RequestMapping("login")
     @ResponseBody
-    public String login(String name){
+    public String login(String name) {
         System.out.println(name);
         String msg = null;
-        if (name!=null){
-            if ("yaojikai".equals(name)){
+        if (name != null) {
+            if ("yaojikai".equals(name)) {
                 msg = "OK";
-            }else {
+            } else {
                 msg = "fail";
             }
         }

@@ -17,15 +17,14 @@ import java.security.cert.X509Certificate;
  * ClassPathXmlApplicationContext     ：可以加载类路径下的配置文件,要求配置文件必须在类路径下，不在的加载不了
  * FileSystemXmlApplicationContext    ：可以加载磁盘任意路径下的配置文件，前提是要有访问权限
  * AnnotationConfigApplicationContext ：用于读取注解创建容器
- *
+ * <p>
  * 核心容器的两个接口
- *  ApplicationContext:在构建核心容器是创建对象采取的策略是立即加载的方式，一读取完配置文件，就创建配置文件中配置的对象
- *  BeanFactory：在构建核心容器是创建对象采取的策略是延迟加载的方式，什么时候根据id获取对象，什么时候创建对象。
+ * ApplicationContext:在构建核心容器是创建对象采取的策略是立即加载的方式，一读取完配置文件，就创建配置文件中配置的对象
+ * BeanFactory：在构建核心容器是创建对象采取的策略是延迟加载的方式，什么时候根据id获取对象，什么时候创建对象。
  */
 public class Client {
     /**
      * 获取spring的Ioc核心容器对象，并根据id获取对象
-     *
      */
     public static void main(String[] args) {
         /*//第一种加载方式

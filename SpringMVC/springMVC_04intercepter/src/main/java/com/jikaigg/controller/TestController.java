@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("user")
 public class TestController {
     @RequestMapping("testIntercepter")
-    public String testIntercepter(){
+    public String testIntercepter() {
         System.out.println("testIntercepter执行了。。。");
         return "success";
     }

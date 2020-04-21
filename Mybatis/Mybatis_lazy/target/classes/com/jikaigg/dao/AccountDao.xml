@@ -22,7 +22,7 @@
         select * from account
     </select>
     <!--根据用户id查询账户信息-->
-    <select id="findAccountByUid" resultType="account" >
+    <select id="findAccountByUid" resultType="account">
         select * from account where uid = #{uid}
     </select>
 </mapper>

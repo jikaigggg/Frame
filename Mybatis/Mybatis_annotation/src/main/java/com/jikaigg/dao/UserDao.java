@@ -11,11 +11,13 @@ import java.util.List;
 
 /**
  * 在mybatis中针对CRUD有四个注解
- * @Select  @Delete  @Insert  @Update
+ *
+ * @Select @Delete  @Insert  @Update
  */
 public interface UserDao {
     /**
      * 查询所有
+     *
      * @return
      */
     @Select("select * from user")
@@ -23,6 +25,7 @@ public interface UserDao {
 
     /**
      * 根据id查询用户信息
+     *
      * @param id
      * @return
      */
@@ -31,12 +34,15 @@ public interface UserDao {
 
     /**
      * 根据用户名称模糊查询用户信息
+     *
      * @return
      */
     @Select("select * from user where username like #{username}")
     List<User> findUserByName(String username);
+
     /**
      * 保存用户
+     *
      * @param user
      */
     @Insert("insert into user(username,address,sex,birthday) values(#{username},#{address},#{sex},#{birthday})")
@@ -44,6 +50,7 @@ public interface UserDao {
 
     /**
      * 更新用户
+     *
      * @param user
      */
     @Update("update user set username=#{username},address=#{address},sex=#{sex},birthday=#{birthday} where id=#{id}")
@@ -51,6 +58,7 @@ public interface UserDao {
 
     /**
      * 删除用户
+     *
      * @param id
      */
     @Delete("delete from user where id=#{id}")

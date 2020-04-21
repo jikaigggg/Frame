@@ -1,6 +1,7 @@
 package com.jikaigg.consumer.pojo;
 
 import lombok.Data;
+
 import java.util.Date;
 
 @Data

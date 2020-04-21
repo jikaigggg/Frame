@@ -13,6 +13,6 @@
     <bean id="cat222" class="com.jikaigg.pojo.Cat"></bean>
     <bean id="dog" class="com.jikaigg.pojo.Dog"></bean>
 
-    <context:annotation-config />
+    <context:annotation-config/>
 
 </beans>

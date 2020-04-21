@@ -29,6 +29,7 @@ public class ConsumerController {
 
     @Autowired
     private UserClient userClient;
+
     @GetMapping("{id}")
     public User queryById(@PathVariable("id") Long id) {
         //根据服务id获取事例

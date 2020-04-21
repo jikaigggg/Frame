@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 @RestController
 public class HelloController implements Serializable {
-    public Model hello(Model model){
+    public Model hello(Model model) {
         model.addAttribute("msg", "xxx");
         return model;
     }

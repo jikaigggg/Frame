@@ -23,7 +23,7 @@ public class UserDaoImpl implements UserDao {
 
     public List<Account> findAll() {
         try {
-            return runner.query("select * from account",new BeanListHandler<Account>(Account.class));
+            return runner.query("select * from account", new BeanListHandler<Account>(Account.class));
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -31,7 +31,7 @@ public class UserDaoImpl implements UserDao {
 
     public Account findAccountById(Integer accountId) {
         try {
-            return runner.query("select * from account where id = ?",new BeanHandler<Account>(Account.class),accountId);
+            return runner.query("select * from account where id = ?", new BeanHandler<Account>(Account.class), accountId);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -39,7 +39,7 @@ public class UserDaoImpl implements UserDao {
 
     public void deleteAccount(Integer accountId) {
         try {
-            runner.update("delete from account where id = ?",accountId);
+            runner.update("delete from account where id = ?", accountId);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -47,7 +47,7 @@ public class UserDaoImpl implements UserDao {
 
     public void insertAccount(Account account) {
         try {
-            runner.update("insert into account(name,money) value(?,?)",account.getName(),account.getMoney());
+            runner.update("insert into account(name,money) value(?,?)", account.getName(), account.getMoney());
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -55,7 +55,7 @@ public class UserDaoImpl implements UserDao {
 
     public void updateAccount(Account account) {
         try {
-            runner.update("update account set name=?,money=? where id=?",account.getName(),account.getMoney(),account.getId());
+            runner.update("update account set name=?,money=? where id=?", account.getName(), account.getMoney(), account.getId());
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

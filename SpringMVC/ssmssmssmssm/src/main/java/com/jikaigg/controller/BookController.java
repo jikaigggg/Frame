@@ -19,55 +19,55 @@ public class BookController {
     private BookService bookService;
 
     @RequestMapping("allbook")
-    public String list(Model model){
+    public String list(Model model) {
         List<Books> all = bookService.findAll();
-        model.addAttribute("list",all);
+        model.addAttribute("list", all);
 
         return "allbook";
     }
 
     @RequestMapping("toaddbook")
-    public String toAddPage(){
+    public String toAddPage() {
         return "addBook";
     }
 
     @RequestMapping("addbook")
-    public String addBook(Books books){
+    public String addBook(Books books) {
         bookService.addBook(books);
         return "redirect:/book/allbook";
     }
 
     @RequestMapping("toupdatebook")
-    public String toupdatebook(Model model,@Param("id") int id){
+    public String toupdatebook(Model model, @Param("id") int id) {
         System.out.println(id);
         Books books = bookService.queryBookById(id);
-        model.addAttribute("books",books);
+        model.addAttribute("books", books);
         return "updateBook";
     }
 
     @RequestMapping("updatebook")
-    public String updatebook(Books books){
+    public String updatebook(Books books) {
         System.out.println(books);
         bookService.updateBook(books);
         return "redirect:/book/allbook";
     }
 
     @RequestMapping("deletebook/{bookId}")
-    public String deletebook(@PathVariable("bookId") int id){
+    public String deletebook(@PathVariable("bookId") int id) {
         bookService.deleteBook(id);
         return "redirect:/book/allbook";
     }
 
     @RequestMapping("querybook")
-    public String querybook(String queryBookName,Model model){
+    public String querybook(String queryBookName, Model model) {
         Books book = bookService.queryBookByName(queryBookName);
         List<Books> selectAll = new ArrayList<Books>();
         selectAll.add(book);
-        if (book == null){
-            selectAll=bookService.findAll();
-            model.addAttribute("error","未查到");
+        if (book == null) {
+            selectAll = bookService.findAll();
+            model.addAttribute("error", "未查到");
         }
-        model.addAttribute("list",selectAll);
+        model.addAttribute("list", selectAll);
         return "allbook";
     }
 

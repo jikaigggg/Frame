@@ -1,7 +1,7 @@
 package com.jikaigg.pojo;
 
 public class Dog {
-    public void show(){
+    public void show() {
         System.out.println("dog...");
     }
 }

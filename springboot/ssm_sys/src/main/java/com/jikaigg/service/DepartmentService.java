@@ -12,17 +12,16 @@ public class DepartmentService {
     @Autowired
     private DepartmentMapper departmentMapper;
 
-    public Department selectOneById(Integer deptId){
+    public Department selectOneById(Integer deptId) {
         return departmentMapper.selectOne(deptId);
     }
 
 
-
-    public List<Department> selectAll(){
+    public List<Department> selectAll() {
         return departmentMapper.selectAll();
     }
 
-    public List<Department> findAll(){
+    public List<Department> findAll() {
         return departmentMapper.findAll();
     }
 

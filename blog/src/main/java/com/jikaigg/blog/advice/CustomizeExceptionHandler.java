@@ -16,15 +16,15 @@ import java.io.IOException;
 @ControllerAdvice
 public class CustomizeExceptionHandler {
     @ExceptionHandler(Exception.class)
-    ModelAndView handler(HttpServletRequest request, HttpServletResponse response,Throwable ex, Model model) {
+    ModelAndView handler(HttpServletRequest request, HttpServletResponse response, Throwable ex, Model model) {
         String contentType = request.getContentType();
         if ("application/json".equals(contentType)) {
-            ResultDTO resultDTO ;
+            ResultDTO resultDTO;
 
             //返回json
-            if (ex instanceof CustomizeException){
+            if (ex instanceof CustomizeException) {
                 resultDTO = ResultDTO.errorOf((CustomizeException) ex);
-            }else {
+            } else {
                 resultDTO = ResultDTO.errorOf(CustomizeErrorCode.SYSTEM_ERROR);
             }
             try {

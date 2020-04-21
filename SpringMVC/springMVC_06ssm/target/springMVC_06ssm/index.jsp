@@ -11,7 +11,7 @@
     <title>index</title>
 </head>
 <body>
-<h3> <a href="/account/findAll">测试查询</a> </h3>
+<h3><a href="/account/findAll">测试查询</a></h3>
 
 <h3>测试保存</h3>
 <form action="account/saveAccount" method="post">

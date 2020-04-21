@@ -14,7 +14,7 @@ public class TestController {
         try {
             //模拟一个异常
             int i = 10 / 0;
-        }catch (Exception e){
+        } catch (Exception e) {
             //打印异常信息
             e.printStackTrace();
             //抛出自定义异常信息

@@ -8,6 +8,7 @@ import java.util.List;
 public interface BookMapper {
     /**
      * 增加一本书
+     *
      * @param books
      * @return
      */
@@ -15,6 +16,7 @@ public interface BookMapper {
 
     /**
      * 删除一本书
+     *
      * @param id
      * @return
      */
@@ -22,6 +24,7 @@ public interface BookMapper {
 
     /**
      * 更新一本书
+     *
      * @param books
      * @return
      */
@@ -29,6 +32,7 @@ public interface BookMapper {
 
     /**
      * 根据id查询一本书
+     *
      * @param id
      * @return
      */
@@ -36,6 +40,7 @@ public interface BookMapper {
 
     /**
      * 查询所有书
+     *
      * @return
      */
     List<Books> findAll();

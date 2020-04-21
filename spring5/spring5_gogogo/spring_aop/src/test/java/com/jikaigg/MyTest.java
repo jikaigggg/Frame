@@ -8,7 +8,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MyTest {
     @Test
-    public void test1(){
+    public void test1() {
         ApplicationContext ac = new ClassPathXmlApplicationContext("applicationContext.xml");
         UserService userService = ac.getBean("userService", UserService.class);
         userService.add();

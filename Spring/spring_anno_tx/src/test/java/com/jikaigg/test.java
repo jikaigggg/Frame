@@ -17,11 +17,9 @@ public class test {
     private AccountService as;
 
     @Test
-    public void test(){
-        as.transfer("yaojikai","shimengyu",3f);
+    public void test() {
+        as.transfer("yaojikai", "shimengyu", 3f);
     }
-
-
 
 
 }

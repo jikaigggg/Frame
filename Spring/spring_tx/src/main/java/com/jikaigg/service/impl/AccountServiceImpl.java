@@ -22,9 +22,9 @@ public class AccountServiceImpl implements AccountService {
     public void transfer(String sourceName, String targetName, Float money) {
         Account source = accountDao.findAccountByName(sourceName);
         Account target = accountDao.findAccountByName(targetName);
-        source.setMoney(source.getMoney()-money);
-        int i = 1/0;
-        target.setMoney(target.getMoney()+money);
+        source.setMoney(source.getMoney() - money);
+        int i = 1 / 0;
+        target.setMoney(target.getMoney() + money);
         accountDao.updateAccount(source);
         accountDao.updateAccount(target);
 

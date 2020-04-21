@@ -11,11 +11,11 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class test {
     @Test
-    public void test(){
+    public void test() {
         ApplicationContext ac = new ClassPathXmlApplicationContext("bean.xml");
         AccountService accountService = ac.getBean("accountService", AccountService.class);
         //AccountDaoImpl accountDao = (AccountDaoImpl) ac.getBean("accountDao", AccountDao.class);
-        accountService.transfer("yaojikai","shimengyu",10f);
+        accountService.transfer("yaojikai", "shimengyu", 10f);
         // Account yaojikai = accountDao.findByName("yaojikai");
         // System.out.println(yaojikai);
     }

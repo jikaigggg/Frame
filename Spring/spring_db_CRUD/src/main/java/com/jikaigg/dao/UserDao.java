@@ -12,6 +12,7 @@ public interface UserDao {
 
     /**
      * 根据id查询用户信息
+     *
      * @param accountId
      * @return
      */
@@ -19,18 +20,21 @@ public interface UserDao {
 
     /**
      * 删除用户
+     *
      * @param accountId
      */
     void deleteAccount(Integer accountId);
 
     /**
      * 插入用户信息
+     *
      * @param account
      */
     void insertAccount(Account account);
 
     /**
      * 更新用户信息
+     *
      * @param account
      */
     void updateAccount(Account account);

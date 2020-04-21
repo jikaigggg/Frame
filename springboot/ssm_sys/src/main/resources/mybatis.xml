@@ -5,7 +5,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:property-placeholder location="classpath:jdbc.properties" />
+    <context:property-placeholder location="classpath:jdbc.properties"/>
 
     <!-- 1. 数据源 : DriverManagerDataSource -->
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
@@ -25,9 +25,9 @@
         <constructor-arg name="executorType" value="BATCH"/>
     </bean>
     <!-- 3. mybatis自动扫描加载Sql映射文件 : MapperScannerConfigurer -->
-    <bean  class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
-        <property name="basePackage" value="com.jikaigg.mapper" />
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+        <property name="basePackage" value="com.jikaigg.mapper"/>
     </bean>
 
 

@@ -9,6 +9,6 @@
     </typeAliases>
 
     <mappers>
-        <mapper class="com.jikaigg.dao.BookMapper" />
+        <mapper class="com.jikaigg.dao.BookMapper"/>
     </mappers>
 </configuration>

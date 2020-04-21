@@ -2,7 +2,7 @@ server:
   port: 8081
 person:
   name: yaojikai
-#  age: 18
+  #  age: 18
   happy: false
   list: ["yaojikai","shimengyu"]
   map: {"k1":"v1","k2":"v2"}

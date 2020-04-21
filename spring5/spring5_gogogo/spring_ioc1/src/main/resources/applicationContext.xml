@@ -13,11 +13,11 @@
 
     -->
     <bean id="hello" class="com.jikaigg.pojo.Hello" name="hello2,hello3">
-        <property name="name" value="么济恺" />
+        <property name="name" value="么济恺"/>
     </bean>
 
     <bean id="user" class="com.jikaigg.pojo.User">
-        <property name="name" value="yaojikai" />
+        <property name="name" value="yaojikai"/>
     </bean>
 
     <!--创建仅有有参构造方法的bean,第一种方法：通过下标注入，对应构造函数的参数列表里的index-->
@@ -36,8 +36,6 @@
     </bean>
 
     <!--import一般用于团队开发，可以将多个配置文件，导入同一个-->
-
-
 
 
 </beans>

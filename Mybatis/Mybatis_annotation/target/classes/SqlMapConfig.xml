@@ -20,7 +20,7 @@
             </dataSource>
         </environment>
     </environments>
-<mappers>
-    <package name="com.jikaigg.dao"/>
-</mappers>
+    <mappers>
+        <package name="com.jikaigg.dao"/>
+    </mappers>
 </configuration>

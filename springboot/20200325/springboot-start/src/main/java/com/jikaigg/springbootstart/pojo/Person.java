@@ -18,7 +18,7 @@ public class Person {
     private Integer age;
     private Boolean happy;
     private List<String> list;
-    private Map<String,String> map;
+    private Map<String, String> map;
     private Set<String> set;
     private Dog dog;
 }

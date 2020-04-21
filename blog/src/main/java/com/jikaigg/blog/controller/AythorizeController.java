@@ -36,9 +36,9 @@ public class AythorizeController {
     private String setRedirect_uri;
 
     @GetMapping("callback")
-    public String callback(@RequestParam("code")String code,
-                           @RequestParam("state")String state,
-                           HttpServletResponse response){
+    public String callback(@RequestParam("code") String code,
+                           @RequestParam("state") String state,
+                           HttpServletResponse response) {
         //DTO网络传输时的对象
         AccessTokenDTO accessTokenDTO = new AccessTokenDTO();
         accessTokenDTO.setClient_id(client_id);
@@ -49,7 +49,7 @@ public class AythorizeController {
         String accessToken = githubProvider.getAccessToken(accessTokenDTO);
         GithubUser githubUser = githubProvider.getUser(accessToken);
         //判断是否有用户，有的话进行操作，将信息存入数据库
-        if (githubUser!=null){
+        if (githubUser != null) {
             User user = new User();
             String token = UUID.randomUUID().toString();
             user.setToken(token);
@@ -57,10 +57,10 @@ public class AythorizeController {
             user.setAccountId(String.valueOf(githubUser.getId()));
             user.setAvatarUrl(githubUser.getAvatarUrl());
             userService.createOrUpdate(user);
-            response.addCookie(new Cookie("token",token));
+            response.addCookie(new Cookie("token", token));
             //重定向到首页
             return "redirect:/";
-        }else {
+        } else {
             //登陆失败，重新登陆
             return "redirect:/";
         }
@@ -68,12 +68,13 @@ public class AythorizeController {
 
     /**
      * 退出登录
+     *
      * @param request
      * @param response
      * @return
      */
     @GetMapping("/logout")
-    public String logout(HttpServletRequest request,HttpServletResponse response){
+    public String logout(HttpServletRequest request, HttpServletResponse response) {
         //移除request中的session
         request.getSession().removeAttribute("user");
         //移除response中的cookie

@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 public class People {
     private String name;
 
-//    @Autowired和@Qualifier组合使用，解决bean的id不一致造成的无法装配的问题
+    //    @Autowired和@Qualifier组合使用，解决bean的id不一致造成的无法装配的问题
     @Autowired
     @Qualifier(value = "cat222")
     private Cat cat;

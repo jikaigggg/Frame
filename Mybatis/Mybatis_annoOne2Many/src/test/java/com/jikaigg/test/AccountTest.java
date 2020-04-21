@@ -20,6 +20,7 @@ public class AccountTest {
     private SqlSessionFactory factory;
     private SqlSession sqlSession;
     private AccountDao accountDao;
+
     @Before
     public void init() throws IOException {
         in = Resources.getResourceAsStream("SqlMapConfig.xml");
@@ -27,6 +28,7 @@ public class AccountTest {
         sqlSession = factory.openSession();
         accountDao = sqlSession.getMapper(AccountDao.class);
     }
+
     @After
     public void destory() throws IOException {
         sqlSession.close();
@@ -34,7 +36,7 @@ public class AccountTest {
     }
 
     @Test
-    public void findAllTest(){
+    public void findAllTest() {
         List<Account> accounts = accountDao.findAll();
         for (Account account : accounts) {
             System.out.println(account);

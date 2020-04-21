@@ -12,7 +12,8 @@
         <result property="sex" column="sex"></result>
         <result property="birthday" column="birthday"></result>
         <!--peizhi user对象中accounts集合的映射-->
-        <collection property="accounts" ofType="account" select="com.jikaigg.dao.AccountDao.findAccountByUid" column="id">
+        <collection property="accounts" ofType="account" select="com.jikaigg.dao.AccountDao.findAccountByUid"
+                    column="id">
         </collection>
     </resultMap>
     <!--查询所有-->

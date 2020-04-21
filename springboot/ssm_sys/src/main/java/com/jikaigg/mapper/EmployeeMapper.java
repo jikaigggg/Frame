@@ -8,16 +8,17 @@ import java.util.List;
 public interface EmployeeMapper {
     /**
      * 根据id查询员工信息
+     *
      * @param empId
      * @return
      */
     @Results(
-            id = "employee",value = {
-                    @Result(property = "empId",column = "emp_id",id = true),
-                    @Result(property = "empName",column = "emp_name"),
-                    @Result(property = "empEmail",column = "emp_email"),
-                    @Result(property = "gender",column = "gender"),
-                    @Result(property = "departmentId",column = "department_id"),
+            id = "employee", value = {
+            @Result(property = "empId", column = "emp_id", id = true),
+            @Result(property = "empName", column = "emp_name"),
+            @Result(property = "empEmail", column = "emp_email"),
+            @Result(property = "gender", column = "gender"),
+            @Result(property = "departmentId", column = "department_id"),
     }
     )
     @Select("select * from tbl_emp where emp_id = #{empId}")
@@ -25,6 +26,7 @@ public interface EmployeeMapper {
 
     /**
      * 根据姓名查询员工信息
+     *
      * @param empName
      * @return
      */
@@ -34,6 +36,7 @@ public interface EmployeeMapper {
 
     /**
      * 查询带有部门信息的Employee
+     *
      * @param empId
      * @return
      */
@@ -44,6 +47,7 @@ public interface EmployeeMapper {
 
     /**
      * 新增用户信息
+     *
      * @param employee
      * @return
      */
@@ -53,6 +57,7 @@ public interface EmployeeMapper {
 
     /**
      * 删除用户
+     *
      * @param empId
      * @return
      */
@@ -62,6 +67,7 @@ public interface EmployeeMapper {
 
     /**
      * 修改用户
+     *
      * @param employee
      * @return
      */
@@ -69,11 +75,12 @@ public interface EmployeeMapper {
     @Update("update tbl_emp set emp_name = #{empName},emp_email = #{empEmail},gender = #{gender},department_id = #{departmentId} where emp_id = #{empId}")
     int updateOne(Employee employee);
 
-//    @Select("select * from tbl_emp e left join tbl_dept d on e.department_id = d.dept_id order by emp_id limit #{limit},#{offset}")
-    List<Employee> selectLimitAndOffset(@Param("limit")Integer limit,@Param("offset")Integer offset);
+    //    @Select("select * from tbl_emp e left join tbl_dept d on e.department_id = d.dept_id order by emp_id limit #{limit},#{offset}")
+    List<Employee> selectLimitAndOffset(@Param("limit") Integer limit, @Param("offset") Integer offset);
 
     /**
      * 查询总记录数
+     *
      * @return
      */
     @Select("select count(*) from tbl_emp")

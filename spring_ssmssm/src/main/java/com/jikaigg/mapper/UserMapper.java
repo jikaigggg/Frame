@@ -12,6 +12,7 @@ import java.util.List;
 public interface UserMapper {
     @Select("select id,name,gender,age,address,email from user")
     List<User> findAll();
+
     @Select("select * from user where name = #{name}")
     User findByName(@Param("name") String name);
 }

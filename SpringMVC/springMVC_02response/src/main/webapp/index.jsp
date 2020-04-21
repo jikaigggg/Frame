@@ -17,12 +17,12 @@
             $("#btn").click(function () {
                 // alert("hello");
                 $.ajax({
-                    url:"user/testAjax",
-                    contentType:"application/json;charset=UTF-8",
-                    data:'{"name":"jikai","password":"yao","age":"15"}',
-                    dataType:"json",
-                    type:"POST",
-                    success:function (data) {
+                    url: "user/testAjax",
+                    contentType: "application/json;charset=UTF-8",
+                    data: '{"name":"jikai","password":"yao","age":"15"}',
+                    dataType: "json",
+                    type: "POST",
+                    success: function (data) {
                         //data指的服务器响应的json数据
                         alert(data);
                         alert(data.name);

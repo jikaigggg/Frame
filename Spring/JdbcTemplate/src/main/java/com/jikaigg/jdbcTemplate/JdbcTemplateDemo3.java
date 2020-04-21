@@ -11,8 +11,8 @@ public class JdbcTemplateDemo3 {
     public static void main(String[] args) {
         //1.获取容器
         ApplicationContext ac = new ClassPathXmlApplicationContext("bean.xml");
-        JdbcTemplate jt = ac.getBean("jdbcTemplate",JdbcTemplate.class);
-        jt.update("insert into account(name,money) value(?,?)","jikai",200);
+        JdbcTemplate jt = ac.getBean("jdbcTemplate", JdbcTemplate.class);
+        jt.update("insert into account(name,money) value(?,?)", "jikai", 200);
 
     }
 }

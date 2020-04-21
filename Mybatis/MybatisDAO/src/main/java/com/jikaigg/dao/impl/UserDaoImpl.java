@@ -29,7 +29,7 @@ public class UserDaoImpl implements UserDao {
         //1.根据factory获取SqlSession对象
         SqlSession session = factory.openSession();
         //2.调用SqlSession中的方法，实现保存
-        session.insert("com.jikaigg.dao.UserDao.saveUser",user);
+        session.insert("com.jikaigg.dao.UserDao.saveUser", user);
         //3.提交事务
         session.commit();
         //4.释放资源
@@ -42,7 +42,7 @@ public class UserDaoImpl implements UserDao {
         //1.根据factory获取SqlSession对象
         SqlSession session = factory.openSession();
         //2.调用SqlSession中的方法，实现修改
-        session.update("com.jikaigg.dao.UserDao.updateUser",user);
+        session.update("com.jikaigg.dao.UserDao.updateUser", user);
         //3.提交事务
         session.commit();
         //4.释放资源
@@ -55,7 +55,7 @@ public class UserDaoImpl implements UserDao {
         //1.根据factory获取SqlSession对象
         SqlSession session = factory.openSession();
         //2.调用SqlSession中的方法，实现删除
-        session.update("com.jikaigg.dao.UserDao.deleteUser",userId);
+        session.update("com.jikaigg.dao.UserDao.deleteUser", userId);
         //3.提交事务
         session.commit();
         //4.释放资源
@@ -68,7 +68,7 @@ public class UserDaoImpl implements UserDao {
         //1.根据factory获取SqlSession对象
         SqlSession session = factory.openSession();
         //2.调用SqlSession中的方法，实现查询列表
-        User user = session.selectOne("com.jikaigg.dao.UserDao.findById",userId);
+        User user = session.selectOne("com.jikaigg.dao.UserDao.findById", userId);
         session.close();
         return user;
     }
@@ -78,7 +78,7 @@ public class UserDaoImpl implements UserDao {
         //1.根据factory获取SqlSession对象
         SqlSession session = factory.openSession();
         //2.调用SqlSession中的方法，实现查询列表
-        List<User> users = session.selectList("com.jikaigg.dao.UserDao.findByName",username);
+        List<User> users = session.selectList("com.jikaigg.dao.UserDao.findByName", username);
         session.close();
         return users;
     }

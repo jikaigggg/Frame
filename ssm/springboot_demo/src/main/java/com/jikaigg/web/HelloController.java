@@ -17,17 +17,17 @@ public class HelloController {
     private UserService userService;
 
     @GetMapping("{id}")
-    public User hello1(@PathVariable("id")Long id){
+    public User hello1(@PathVariable("id") Long id) {
         return userService.queryById(id);
     }
 
     @GetMapping("hello")
-    public User hello2(){
+    public User hello2() {
         return userService.queryById(41L);
     }
 
     @GetMapping("hello.do")
-    public User hello3(){
+    public User hello3() {
         return userService.queryById(41L);
     }
 }

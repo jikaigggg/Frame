@@ -11,6 +11,6 @@
     <title>index</title>
 </head>
 <body>
-<h3> <a href="/product/findAll.do">跳转</a> </h3>
+<h3><a href="/product/findAll.do">跳转</a></h3>
 </body>
 </html>

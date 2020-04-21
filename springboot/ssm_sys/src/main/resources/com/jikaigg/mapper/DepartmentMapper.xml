@@ -4,15 +4,15 @@
 <mapper namespace="com.jikaigg.mapper.DepartmentMapper">
 
     <resultMap id="dept" type="com.jikaigg.domain.Department">
-        <result property="deptId" column="dept_id" />
-        <result property="deptName" column="dept_name" />
-        <result property="deptLeader" column="dept_leader" />
+        <result property="deptId" column="dept_id"/>
+        <result property="deptName" column="dept_name"/>
+        <result property="deptLeader" column="dept_leader"/>
         <collection property="employee" ofType="com.jikaigg.domain.Employee">
-            <id  property = "empId" column = "emp_id" />
-            <result property = "empName" column = "emp_name" />
-            <result property = "empEmail" column = "emp_email" />
-            <result property = "gender" column = "gender" />
-            <result property = "departmentId" column = "department_id" />
+            <id property="empId" column="emp_id"/>
+            <result property="empName" column="emp_name"/>
+            <result property="empEmail" column="emp_email"/>
+            <result property="gender" column="gender"/>
+            <result property="departmentId" column="department_id"/>
         </collection>
     </resultMap>
 

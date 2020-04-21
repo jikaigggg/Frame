@@ -16,9 +16,9 @@ pets:
   - dog
   - cat
   - #行内写法
-#pets: [dog,cat]
+    #pets: [dog,cat]
 
 
-#yaml可以直接给实体类赋值
+    #yaml可以直接给实体类赋值
 
 

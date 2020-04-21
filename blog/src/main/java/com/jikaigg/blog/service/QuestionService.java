@@ -134,10 +134,10 @@ public class QuestionService {
 
     public void createOrUpdate(Question question) {
         Question questionById = questionMapper.getQuestionById(question.getId());
-        if (questionById != null){
+        if (questionById != null) {
             question.setModifiedTime(System.currentTimeMillis());
             questionMapper.updateQuestion(question);
-        }else {
+        } else {
             questionMapper.createQuestion(question);
         }
     }

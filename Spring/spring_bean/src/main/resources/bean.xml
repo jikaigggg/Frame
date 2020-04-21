@@ -34,7 +34,8 @@
             session：作用于web应用的会话范围
             global-session：作用于集群环境的会话范围（全局会话范围），如果不是集群那这个标签作用等同于session标签
     -->
-    <bean id="accountService" class="com.jikaigg.service.impl.AccountServiceImpl" scope="prototype" init-method="init" destroy-method="destory"></bean>
+    <bean id="accountService" class="com.jikaigg.service.impl.AccountServiceImpl" scope="prototype" init-method="init"
+          destroy-method="destory"></bean>
 
     <!--
     bean对象的生命周期

@@ -19,6 +19,7 @@ public class userServiceTest {
             System.out.println(account);
         }
     }
+
     @Test
     public void findAccountById() {
         ClassPathXmlApplicationContext as = new ClassPathXmlApplicationContext("bean.xml");
@@ -26,6 +27,7 @@ public class userServiceTest {
         Account account = userdao.findAccountById(2);
         System.out.println(account);
     }
+
     @Test
     public void insertAccount() {
         ClassPathXmlApplicationContext as = new ClassPathXmlApplicationContext("bean.xml");
@@ -46,8 +48,9 @@ public class userServiceTest {
         account.setMoney(10.5f);
         userdao.updateAccount(account);
     }
+
     @Test
-    public void deleteAccount(){
+    public void deleteAccount() {
         ApplicationContext ac = new ClassPathXmlApplicationContext("bean.xml");
         UserDao userDao = ac.getBean("userDao", UserDao.class);
         userDao.deleteAccount(4);

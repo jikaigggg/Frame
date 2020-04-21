@@ -11,6 +11,7 @@ public interface CommentMapper {
 
     /**
      * 插入评论
+     *
      * @param comment
      */
     @Insert("insert into comment(parent_id,content,type,commentator,create_time,modified_time,like_count) " +
@@ -19,6 +20,7 @@ public interface CommentMapper {
 
     /**
      * 根据问题id查询评论
+     *
      * @param parentId
      * @return
      */

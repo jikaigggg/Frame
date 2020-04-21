@@ -15,7 +15,7 @@ public class TransectionManager {
     /**
      * 开启事务
      */
-    public void beginTransaction(){
+    public void beginTransaction() {
         try {
             connectionUtils.getThreadConnection().setAutoCommit(false);
         } catch (SQLException e) {
@@ -26,7 +26,7 @@ public class TransectionManager {
     /**
      * 提交事务
      */
-    public void commit(){
+    public void commit() {
         try {
             connectionUtils.getThreadConnection().commit();
         } catch (SQLException e) {
@@ -37,7 +37,7 @@ public class TransectionManager {
     /**
      * 回滚事务
      */
-    public void rollback(){
+    public void rollback() {
         try {
             connectionUtils.getThreadConnection().rollback();
         } catch (SQLException e) {
@@ -48,7 +48,7 @@ public class TransectionManager {
     /**
      * 释放连接
      */
-    public void release(){
+    public void release() {
         try {
             connectionUtils.getThreadConnection().close();  //close是吧连接放回连接池中
             connectionUtils.removeConnection();

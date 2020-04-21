@@ -14,11 +14,11 @@
         $(function () {
             $("#btn").click(function () {
                 $.post({
-                    url:"${pageContext.request.contextPath}/a2",
-                    success:function (data) {
+                    url: "${pageContext.request.contextPath}/a2",
+                    success: function (data) {
                         var html = "";
-                        for (let i = 0;i<data.length;i++){
-                            html+="<tr><td>"+data[i].name+"</td>"+"<td>"+data[i].age+"</td>"+"<td>"+data[i].gender+"</td></tr>"
+                        for (let i = 0; i < data.length; i++) {
+                            html += "<tr><td>" + data[i].name + "</td>" + "<td>" + data[i].age + "</td>" + "<td>" + data[i].gender + "</td></tr>"
                         }
                         $("#context").html(html)
                     }

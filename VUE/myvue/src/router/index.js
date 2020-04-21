@@ -8,31 +8,31 @@ import Kai from '../components/Kai'
 Vue.use(VueRouter)
 
 //配置导出路由
-export  default new VueRouter({
-  routes:[
+export default new VueRouter({
+  routes: [
     {
       //配置路径
-      path:'/context',
+      path: '/context',
 
-      name:'context',
+      name: 'context',
       //跳转的组件
-      component:Context
+      component: Context
     },
     {
       //配置路径
-      path:'/main',
+      path: '/main',
 
-      name:'main',
+      name: 'main',
       //跳转的组件
-      component:Main
+      component: Main
     },
     {
       //配置路径
-      path:'/kai',
+      path: '/kai',
 
-      name:'kai',
+      name: 'kai',
       //跳转的组件
-      component:Kai
+      component: Kai
     }
   ]
 })

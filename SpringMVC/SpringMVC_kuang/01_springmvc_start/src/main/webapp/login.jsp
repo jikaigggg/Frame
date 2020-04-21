@@ -13,9 +13,9 @@
     <script>
         function login() {
             $.post({
-                url:"${pageContext.request.contextPath}/login",
-                data:{"name":$("#username").val()},
-                success:function (data) {
+                url: "${pageContext.request.contextPath}/login",
+                data: {"name": $("#username").val()},
+                success: function (data) {
                     alert(data);
                 }
             })
@@ -24,8 +24,8 @@
 </head>
 <body>
 <form action="">
-    用户名：<input type="text" id="username"  onblur="login()"/>
-    密码：<input type="text" id="password"  onblur="login()"/>
+    用户名：<input type="text" id="username" onblur="login()"/>
+    密码：<input type="text" id="password" onblur="login()"/>
 
 </form>
 </body>

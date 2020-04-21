@@ -6,9 +6,9 @@ package com.jikaigg.pojo;
 public class Student {
     private String name;
 
-    public Student(String name){
+    public Student(String name) {
         this.name = name;
-        System.out.println("有参构造方法运行："+name);
+        System.out.println("有参构造方法运行：" + name);
     }
 
     public String getName() {
@@ -19,7 +19,7 @@ public class Student {
         this.name = name;
     }
 
-    public void show(){
-        System.out.println("name"+name);
+    public void show() {
+        System.out.println("name" + name);
     }
 }

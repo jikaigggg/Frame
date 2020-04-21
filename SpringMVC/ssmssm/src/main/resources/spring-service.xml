@@ -10,15 +10,15 @@
         http://www.springframework.org/schema/cache
         http://www.springframework.org/schema/cache/spring-cache.xsd">
     <!--扫描service下的包-->
-    <context:component-scan base-package="com.jikaigg.service" />
+    <context:component-scan base-package="com.jikaigg.service"/>
     <!--将所有的业务类，注入到spring，可以通过配置，或者注解实现-->
     <bean id="bookServiceImpl" class="com.jikaigg.service.impl.BookServiceImpl">
-        <property name="mapper" ref="bookMapper" />
+        <property name="mapper" ref="bookMapper"/>
     </bean>
     <!--声明式事务控制-->
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <!--注入数据源-->
-        <property name="dataSource" ref="dataSource" />
+        <property name="dataSource" ref="dataSource"/>
     </bean>
     <!--aop横切事务支持-->
 

@@ -24,10 +24,10 @@ public class ProfileController {
                           @PathVariable("action") String action,
                           HttpServletRequest request,
                           Model model) {
-        System.out.println(page +"-------"+size);
-        User user = (User)request.getSession().getAttribute("user");
+        System.out.println(page + "-------" + size);
+        User user = (User) request.getSession().getAttribute("user");
 
-        if (user == null){
+        if (user == null) {
             return "redirect:/";
         }
         if ("question".equals(action)) {
@@ -39,7 +39,7 @@ public class ProfileController {
             model.addAttribute("sectionName", "最新回复");
         }
         PageDTO pageDTO = questionService.selectList(user.getId(), page, size);
-        model.addAttribute("userqueslist",pageDTO);
+        model.addAttribute("userqueslist", pageDTO);
 
         return "profile";
     }

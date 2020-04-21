@@ -10,11 +10,12 @@ public class AccountServiceImpl implements AccountService {
     public void saveAccount() {
         System.out.println("service方法中的saveAccount");
     }
-    public void init(){
+
+    public void init() {
         System.out.println("init...");
     }
 
-    public void destory(){
+    public void destory() {
         System.out.println("destoey...");
     }
 }

@@ -10,7 +10,7 @@ public class EmployeeService {
     @Autowired
     private EmployeeMapper employeeMapper;
 
-    public Employee selectOneById(Integer empId){
+    public Employee selectOneById(Integer empId) {
         return employeeMapper.selectOneById(empId);
     }
 }

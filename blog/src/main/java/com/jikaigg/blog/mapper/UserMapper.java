@@ -7,6 +7,7 @@ import org.apache.ibatis.annotations.*;
 public interface UserMapper {
     /**
      * 插入用户
+     *
      * @param user
      */
     @Insert("insert into user(account_id,name,token,create_time,modified_time,avatar_url) " +
@@ -15,6 +16,7 @@ public interface UserMapper {
 
     /**
      * 根据token查询用户
+     *
      * @param token
      * @return
      */
@@ -23,6 +25,7 @@ public interface UserMapper {
 
     /**
      * 根据id查询用户
+     *
      * @param id
      * @return
      */
@@ -31,6 +34,7 @@ public interface UserMapper {
 
     /**
      * 根据accountId查询用户
+     *
      * @param accountId
      * @return
      */
@@ -39,6 +43,7 @@ public interface UserMapper {
 
     /**
      * 更新用户
+     *
      * @param user
      */
     @Update("update user set name = #{name},token = #{token},modified_time = #{modifiedTime},avatar_url = #{avatarUrl} " +

@@ -80,7 +80,7 @@ public class testController {
         String uuid = UUID.randomUUID().toString().replace("-", "");
         filename = uuid + "_" + filename;
         //完成文件上传
-        upload.transferTo(new File(path,filename));
+        upload.transferTo(new File(path, filename));
 
 
         return "success";

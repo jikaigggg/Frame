@@ -27,14 +27,15 @@ public class EmployeeController {
 
     /**
      * 查询所有员工，返回列表页面
+     *
      * @return
      */
 
     @GetMapping("/emps")
-    public String list(Model model){
+    public String list(Model model) {
 
         Collection<Employee> all = employeeDao.getAll();
-        model.addAttribute("emps",all);
+        model.addAttribute("emps", all);
         return "emp/list";
 
     }
@@ -42,38 +43,38 @@ public class EmployeeController {
 
     //来到员工添加页面
     @GetMapping("/emp")
-    public String addEmployeePage(Model model){
+    public String addEmployeePage(Model model) {
         //查出所有的部门，在页面显示
         Collection<Department> departments = departmentDao.getDepartments();
-        model.addAttribute("depts",departments);
+        model.addAttribute("depts", departments);
 
         return "emp/add";
     }
 
     @PostMapping("/emp")
-    public String addEmployee(Employee employee){
+    public String addEmployee(Employee employee) {
         employeeDao.save(employee);
         return "redirect:/emps";
     }
 
     @DeleteMapping("/emp/{id}")
-    public String deleteEmp(@PathVariable("id")Integer id) {
+    public String deleteEmp(@PathVariable("id") Integer id) {
         employeeDao.delete(id);
         return "redirect:/emps";
     }
 
     @GetMapping("/emp/{id}")
-    public String toEditPage(@PathVariable("id") Integer id,Model model){
+    public String toEditPage(@PathVariable("id") Integer id, Model model) {
         Employee employee = employeeDao.get(id);
         Collection<Department> departments = departmentDao.getDepartments();
-        model.addAttribute("depts",departments);
-        model.addAttribute("emp",employee);
+        model.addAttribute("depts", departments);
+        model.addAttribute("emp", employee);
         //回到修改页面
         return "emp/add";
     }
 
     @PutMapping("/emp")
-    public String editEmployee(Employee employee){
+    public String editEmployee(Employee employee) {
         employeeDao.save(employee);
         return "redirect:emps";
     }

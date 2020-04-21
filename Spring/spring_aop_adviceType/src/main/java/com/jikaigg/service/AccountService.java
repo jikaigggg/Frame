@@ -11,12 +11,14 @@ public interface AccountService {
 
     /**
      * 模拟更新账户
+     *
      * @param i
      */
     void updateAccount(int i);
 
     /**
      * 模拟删除账户
+     *
      * @return
      */
     int deleteAccount();

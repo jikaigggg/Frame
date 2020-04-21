@@ -22,6 +22,7 @@ public class MybatisTest {
 
     /**
      * 初始化是执行
+     *
      * @throws IOException
      */
     @Before //用于在测试方法执行之前执行
@@ -37,6 +38,7 @@ public class MybatisTest {
         userDao = new UserDaoImpl(factory);
 
     }
+
     /**
      * 结束时执行
      */
@@ -52,7 +54,7 @@ public class MybatisTest {
      * 测试查询所有
      */
     @Test
-    public void testFindAll(){
+    public void testFindAll() {
 
         //5.使用代理对象执行方法
         List<User> users = userDao.findAll();
@@ -65,24 +67,24 @@ public class MybatisTest {
      * 测试保存用户
      */
     @Test
-    public void testSave(){
+    public void testSave() {
         User user = new User();
         user.setUsername("yaojikaidao");
         user.setAddress("北京");
         user.setSex("男");
         user.setBirthday(new Date());
 
-        System.out.println("before   "+user);
+        System.out.println("before   " + user);
         //5.执行保存方法
         userDao.saveUser(user);
-        System.out.println("after    "+user);
+        System.out.println("after    " + user);
     }
 
     /**
      * 测试更新用户信息
      */
     @Test
-    public void testUpdate(){
+    public void testUpdate() {
         User user = new User();
         user.setId(53);
         user.setUsername("yaojikaiyodate1");
@@ -99,7 +101,7 @@ public class MybatisTest {
      * 测试删除用户
      */
     @Test
-    public void testDelete(){
+    public void testDelete() {
         //5.执行保存方法
         userDao.deleteUser(53);
 
@@ -109,15 +111,16 @@ public class MybatisTest {
      * 测试根据id查询用户信息
      */
     @Test
-    public void testFindById(){
+    public void testFindById() {
         User user = userDao.findById(48);
         System.out.println(user);
     }
+
     /**
      * 测试根据username模糊查询用户信息
      */
     @Test
-    public void testFindByName(){
+    public void testFindByName() {
         // 对应#{username}方式
         List<User> list = userDao.findByName("%二%");
         // 对应'%${value}%'方式

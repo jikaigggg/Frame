@@ -2,24 +2,26 @@
 <html>
 <head>
     <title>index</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="${pageContext.request.contextPath}/static/js/jquery.js"></script>
     <script>
         function login() {
             $.post({
-                url:"${pageContext.request.contextPath}/user/login",
-                data:{name:$("#username").val()},
-                success:function (data) {
+                url: "${pageContext.request.contextPath}/user/login",
+                data: {name: $("#username").val()},
+                success: function (data) {
                     if (data === "OK") {
-                        $("#msg").css("color","green");
+                        $("#msg").css("color", "green");
                         $("#msg").html("对勾");
                     } else {
-                        $("#msg").css("color","red");
+                        $("#msg").css("color", "red");
                         $("#msg").html("有问题啊");
                     }
                 }
             })
         }
+
         $(function () {
             $("#l")
         })

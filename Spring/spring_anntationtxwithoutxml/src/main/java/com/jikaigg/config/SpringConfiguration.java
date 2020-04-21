@@ -8,7 +8,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  */
 @Configuration
 @ComponentScan("com.jikaigg")
-@Import({JdbcConfig.class,TransectionConfig.class})
+@Import({JdbcConfig.class, TransectionConfig.class})
 @PropertySource("jdbcConfig.properties")
 @EnableTransactionManagement
 public class SpringConfiguration {

@@ -24,6 +24,7 @@ public class MybatisTest {
 
     /**
      * 初始化是执行
+     *
      * @throws IOException
      */
     @Before //用于在测试方法执行之前执行
@@ -40,6 +41,7 @@ public class MybatisTest {
         accountDao = session.getMapper(AccountDao.class);
 
     }
+
     /**
      * 结束时执行
      */
@@ -55,7 +57,7 @@ public class MybatisTest {
      * 测试查询所有,同时获取到当前账户的所属账户信息
      */
     @Test
-    public void testFindAll(){
+    public void testFindAll() {
         List<Account> accounts = accountDao.findAll();
         for (Account account : accounts) {
             System.out.println(account);
@@ -67,7 +69,7 @@ public class MybatisTest {
      * 查询所有账户，并且带有用户名称和地址信息
      */
     @Test
-    public void testFindAllAccount(){
+    public void testFindAllAccount() {
         List<AccountUser> accounts = accountDao.findAllAccount();
         for (Account account : accounts) {
             System.out.println(account);

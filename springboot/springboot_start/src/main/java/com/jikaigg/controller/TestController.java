@@ -13,15 +13,15 @@ public class TestController {
     private String addr;
 
     @RequestMapping("test1")
-    public String test1(){
+    public String test1() {
         return "hello world!!!";
     }
 
     @RequestMapping("test2")
-    public String test2(){
+    public String test2() {
         // 获得配置文件的信息
         System.out.println(addr);
 
-        return "name:"+name+"\r\n addr:" + addr;
+        return "name:" + name + "\r\n addr:" + addr;
     }
 }

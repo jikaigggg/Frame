@@ -8,17 +8,17 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 @RequestMapping("/user")
 public class StartController {
-    @RequestMapping(path = "/hello",params = {"username=haha"})
-    public String sayHello(){
+    @RequestMapping(path = "/hello", params = {"username=haha"})
+    public String sayHello() {
         System.out.println("springMVC");
         return "success";
     }
 
     /*
-    * method属性限制请求方式
-    * */
-    @RequestMapping(path = "/world",method = {RequestMethod.GET})
-    public String world(){
+     * method属性限制请求方式
+     * */
+    @RequestMapping(path = "/world", method = {RequestMethod.GET})
+    public String world() {
         System.out.println("world");
         return "success";
     }

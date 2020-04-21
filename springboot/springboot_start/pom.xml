@@ -15,18 +15,18 @@
     <artifactId>springboot_start</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-<dependencies>
-    <!--以功能为单位-->
-    <!--web功能的起步依赖-->
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-web</artifactId>
-    </dependency>
-    <!--spring热部署依赖的jar包
-    -->
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-devtools</artifactId>
-    </dependency>
-</dependencies>
+    <dependencies>
+        <!--以功能为单位-->
+        <!--web功能的起步依赖-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!--spring热部署依赖的jar包
+        -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+        </dependency>
+    </dependencies>
 </project>

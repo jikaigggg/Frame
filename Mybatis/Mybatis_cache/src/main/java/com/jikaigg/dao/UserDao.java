@@ -6,12 +6,13 @@ import java.util.List;
 
 /**
  * @author jikaigg
- *
+ * <p>
  * 用户的持久层接口
  */
 public interface UserDao {
     /**
      * 查询所有操作
+     *
      * @return
      */
     List<User> findAll();
@@ -19,12 +20,14 @@ public interface UserDao {
 
     /**
      * 根据用户id查询用户信息
+     *
      * @param userId
      */
     User findById(Integer userId);
 
     /**
      * 更新用户信息
+     *
      * @param user
      */
     void updateUser(User user);

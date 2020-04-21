@@ -12,7 +12,7 @@ public class JdbcTemplateDemo2 {
     public static void main(String[] args) {
         //1.获取容器
         ApplicationContext ac = new ClassPathXmlApplicationContext("bean.xml");
-        JdbcTemplate jt = ac.getBean("jdbcTemplate",JdbcTemplate.class);
+        JdbcTemplate jt = ac.getBean("jdbcTemplate", JdbcTemplate.class);
 
     }
 }

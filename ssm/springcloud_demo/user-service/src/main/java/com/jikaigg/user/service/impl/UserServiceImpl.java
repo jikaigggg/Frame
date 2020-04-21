@@ -10,7 +10,7 @@ public class UserServiceImpl {
     @Autowired
     private UserMapper userMapper;
 
-    public User queryById(Long id){
+    public User queryById(Long id) {
         return userMapper.selectByPrimaryKey(id);
     }
 }

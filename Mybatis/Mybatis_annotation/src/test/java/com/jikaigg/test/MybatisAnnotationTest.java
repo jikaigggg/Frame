@@ -11,7 +11,7 @@ import java.io.InputStream;
 import java.util.List;
 
 public class MybatisAnnotationTest {
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
         InputStream in = Resources.getResourceAsStream("SqlMapConfig.xml");
         SqlSessionFactory factory = new SqlSessionFactoryBuilder().build(in);
         SqlSession session = factory.openSession();

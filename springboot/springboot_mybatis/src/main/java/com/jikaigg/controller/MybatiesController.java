@@ -16,7 +16,7 @@ public class MybatiesController {
 
 
     @RequestMapping("query")
-    public List<Account> queryAccountList(){
+    public List<Account> queryAccountList() {
         List<Account> accounts = accountMapper.queryAccountList();
         return accounts;
 

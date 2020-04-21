@@ -6,6 +6,7 @@ public interface AccountDao {
 
     /**
      * 通过id查询账户信息
+     *
      * @param id
      * @return
      */
@@ -13,6 +14,7 @@ public interface AccountDao {
 
     /**
      * 通过name查询账户信息
+     *
      * @param name
      * @return
      */
@@ -20,6 +22,7 @@ public interface AccountDao {
 
     /**
      * 更新账户信息
+     *
      * @param account
      */
     void updateAccount(Account account);

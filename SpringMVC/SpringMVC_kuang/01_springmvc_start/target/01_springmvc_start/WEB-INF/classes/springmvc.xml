@@ -11,24 +11,26 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:component-scan base-package="com.jikaigg" />
+    <context:component-scan base-package="com.jikaigg"/>
     <!--处理器映射器-->
     <bean id="internalResourceViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/WEB-INF/jsp/" />
-        <property name="suffix" value=".jsp" />
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <property name="suffix" value=".jsp"/>
     </bean>
 
-    <mvc:default-servlet-handler />
+    <mvc:default-servlet-handler/>
 
     <mvc:annotation-driven>
         <mvc:message-converters>
             <bean id="messageConverter" class="org.springframework.http.converter.StringHttpMessageConverter">
-                <constructor-arg value="UTF-8" />
+                <constructor-arg value="UTF-8"/>
             </bean>
-            <bean id="httpMessageConverter" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+            <bean id="httpMessageConverter"
+                  class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
                 <property name="objectMapper">
-                    <bean id="objectMapper" class="org.springframework.http.converter.json.Jackson2ObjectMapperFactoryBean">
-                        <property name="failOnEmptyBeans" value="false" />
+                    <bean id="objectMapper"
+                          class="org.springframework.http.converter.json.Jackson2ObjectMapperFactoryBean">
+                        <property name="failOnEmptyBeans" value="false"/>
                     </bean>
                 </property>
             </bean>

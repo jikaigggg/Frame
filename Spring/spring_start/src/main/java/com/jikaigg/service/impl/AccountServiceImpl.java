@@ -8,6 +8,7 @@ import com.jikaigg.service.AccountService;
  */
 public class AccountServiceImpl implements AccountService {
     private AccountDao accountDao;
+
     public void saveAccount() {
         accountDao.saveAccount();
     }

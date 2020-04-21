@@ -14,7 +14,8 @@
     </ul>-->
     <todo>
         <todo-title slot="todo-title" :title="title"></todo-title>
-        <todo-items slot="todo-items" v-for="(ele,index) in items" :item="ele" :index="index"  v-on:remove="removeItems"></todo-items>
+        <todo-items slot="todo-items" v-for="(ele,index) in items" :item="ele" :index="index"
+                    v-on:remove="removeItems"></todo-items>
     </todo>
 </div>
 
@@ -22,26 +23,27 @@
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
 <script type="text/javascript">
     /*slot定义插槽*/
-    Vue.component("todo",{template:
-        '<div>'+
-            '<slot name="todo-title"></slot>'+
-                '<ul>'+
-                    '<slot name="todo-items"></slot>'+
-                '</ul>'+
-        '</div>'
+    Vue.component("todo", {
+        template:
+            '<div>' +
+            '<slot name="todo-title"></slot>' +
+            '<ul>' +
+            '<slot name="todo-items"></slot>' +
+            '</ul>' +
+            '</div>'
     });
-    Vue.component("todo-title",{
-        props:['title'],
+    Vue.component("todo-title", {
+        props: ['title'],
         template:
             '<div>{{title}}</div>'
     });
-    Vue.component("todo-items",{
-        props:['item','index'],
+    Vue.component("todo-items", {
+        props: ['item', 'index'],
         template:
             '<li>{{index}}---{{item}}  <button v-on:click="remove(index)">删除</button></li>',
         methods: {
-            remove: function(index) {
-                this.$emit('remove',index)
+            remove: function (index) {
+                this.$emit('remove', index)
             }
         }
     });
@@ -49,14 +51,14 @@
 
     var vm = new Vue({
         el: '#app',
-        data:{
-            title:"书籍列表",
-            items:["么济恺","爱","石梦宇"]
+        data: {
+            title: "书籍列表",
+            items: ["么济恺", "爱", "石梦宇"]
 
         },
-        methods:{
-            removeItems:function (index) {
-                this.items.splice(index,1);
+        methods: {
+            removeItems: function (index) {
+                this.items.splice(index, 1);
             }
         }
     });

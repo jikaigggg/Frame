@@ -10,7 +10,7 @@ public class test {
     public static void main(String[] args) {
         ApplicationContext ac = new ClassPathXmlApplicationContext("bean.xml");
         AccountService accountService = ac.getBean("accountService", AccountService.class);
-        accountService.transfer("yaojikai","shimengyu",1f);
+        accountService.transfer("yaojikai", "shimengyu", 1f);
     }
 
 }

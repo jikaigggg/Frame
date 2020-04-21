@@ -42,9 +42,9 @@
     <select id="findUserByCondition" resultType="User" parameterType="com.jikaigg.domain.User">
         select * from user
         <where>
-        <if test="username != null">
-            and username = #{username};
-        </if>
+            <if test="username != null">
+                and username = #{username};
+            </if>
         </where>
     </select>
 

@@ -22,6 +22,7 @@ public class RoleTest {
 
     /**
      * 初始化是执行
+     *
      * @throws IOException
      */
     @Before //用于在测试方法执行之前执行
@@ -38,6 +39,7 @@ public class RoleTest {
         roleDao = session.getMapper(RoleDao.class);
 
     }
+
     /**
      * 结束时执行
      */
@@ -53,7 +55,7 @@ public class RoleTest {
      * 测试查询所有,同时获取到当前账户的所属账户信息
      */
     @Test
-    public void testFindAll(){
+    public void testFindAll() {
         List<Role> roles = roleDao.findAll();
         for (Role role : roles) {
             System.out.println(role);

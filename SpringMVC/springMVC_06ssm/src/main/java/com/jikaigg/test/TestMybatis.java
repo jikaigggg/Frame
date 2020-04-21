@@ -18,6 +18,7 @@ import java.util.List;
 public class TestMybatis {
     /**
      * 测试查询
+     *
      * @throws IOException
      */
     @Test
@@ -42,6 +43,7 @@ public class TestMybatis {
 
     /**
      * 测试保存
+     *
      * @throws IOException
      */
     @Test

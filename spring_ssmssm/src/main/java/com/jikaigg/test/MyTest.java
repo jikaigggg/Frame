@@ -13,7 +13,7 @@ public class MyTest {
         ApplicationContext ac = new ClassPathXmlApplicationContext("applicationContext.xml");
         UserService userService = ac.getBean("userServiceImpl", UserService.class);
         User user = userService.findByName("么济恺");
-            System.out.println(user);
+        System.out.println(user);
 
     }
 }

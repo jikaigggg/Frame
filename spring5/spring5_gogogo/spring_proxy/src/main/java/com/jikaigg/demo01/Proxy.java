@@ -1,6 +1,6 @@
 package com.jikaigg.demo01;
 
-public class Proxy implements Rent{
+public class Proxy implements Rent {
     private Host host;
 
     public Proxy() {

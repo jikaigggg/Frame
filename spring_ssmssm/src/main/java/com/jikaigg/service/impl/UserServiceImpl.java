@@ -12,7 +12,8 @@ import java.util.List;
 public class UserServiceImpl implements UserService {
     @Autowired
     private UserMapper userMapper;
-    public List<User> findAll(){
+
+    public List<User> findAll() {
         return userMapper.findAll();
     }
 

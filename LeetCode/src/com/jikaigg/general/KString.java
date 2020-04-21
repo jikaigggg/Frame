@@ -19,11 +19,11 @@ public class KString {
 
         //4、compareTo用字符串和对象（或字符串）进行比较
         /* 如果完全相等返回0；
-        * 如果不等，第一种情况是一个字符串完全匹配第二个字符串的前半部分，这种情况返回，另一个字符串比第一个字符串长多少
-        * s1=ab; s2=abc;这个时候两个比较返回的为1或-1，看谁和谁比（长的和短的比返回）s2.compareTo(s1)返回1，s1.compareTo(s2)返回-1
-        * 第二种情况是两个字符串不相等的第一个自负的差值
-        * s1=ab;s2=ad;s2.compareTo(s1)返回2，s1.compareTo(s2)返回-2
-        * */
+         * 如果不等，第一种情况是一个字符串完全匹配第二个字符串的前半部分，这种情况返回，另一个字符串比第一个字符串长多少
+         * s1=ab; s2=abc;这个时候两个比较返回的为1或-1，看谁和谁比（长的和短的比返回）s2.compareTo(s1)返回1，s1.compareTo(s2)返回-1
+         * 第二种情况是两个字符串不相等的第一个自负的差值
+         * s1=ab;s2=ad;s2.compareTo(s1)返回2，s1.compareTo(s2)返回-2
+         * */
         /*System.out.println(str.compareTo(str1));
         System.out.println(str1.compareTo(str));
         System.out.println(str.compareTo(str2));
@@ -38,7 +38,7 @@ public class KString {
 
         //7、返回从参数索引开始到结尾（有第二个参数是是到第二个参数表示的所索引结尾）
         System.out.println(str.substring(3));
-        System.out.println(str.substring(3,5));
+        System.out.println(str.substring(3, 5));
 
         //8、
         String s = str.replaceAll("a", "A");

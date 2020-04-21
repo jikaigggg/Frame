@@ -15,20 +15,21 @@ public class test {
         Hello hello = (Hello) ac.getBean("hello");
         System.out.println(hello);
     }
+
     @Test
-    public void test2(){
+    public void test2() {
         User user = new User();
     }
 
     @Test
-    public void test3(){
+    public void test3() {
         ApplicationContext ac = new ClassPathXmlApplicationContext("applicationContext.xml");
         User user = (User) ac.getBean("user");
         user.show();
     }
 
     @Test
-    public void test4(){
+    public void test4() {
         ApplicationContext ac = new ClassPathXmlApplicationContext("applicationContext.xml");
         Student student = (Student) ac.getBean("student");
         student.show();

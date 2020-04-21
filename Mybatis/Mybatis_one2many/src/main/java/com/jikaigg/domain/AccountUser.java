@@ -22,7 +22,7 @@ public class AccountUser extends Account {
 
     @Override
     public String toString() {
-        return super.toString()+"AccountUser{" +
+        return super.toString() + "AccountUser{" +
                 "username='" + username + '\'' +
                 ", address='" + address + '\'' +
                 '}';

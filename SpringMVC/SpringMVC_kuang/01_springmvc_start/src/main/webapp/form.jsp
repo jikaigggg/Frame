@@ -12,7 +12,7 @@
 </head>
 <body>
 <form action="/f1" method="post">
-    <input type="text" name="name" >
+    <input type="text" name="name">
     <input type="submit" value="提交">
 
 </form>

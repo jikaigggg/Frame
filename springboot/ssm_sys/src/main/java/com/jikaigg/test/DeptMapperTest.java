@@ -21,7 +21,7 @@ public class DeptMapperTest {
      * 测试新增
      */
     @Test
-    public void testInsertDept(){
+    public void testInsertDept() {
         Department department = new Department();
         department.setDeptId(4);
         department.setDeptName("航天");
@@ -29,11 +29,12 @@ public class DeptMapperTest {
         int i = departmentMapper.insertDept(department);
         System.out.println(i);
     }
+
     /**
      * 测试修改
      */
     @Test
-    public void testUpdateDept(){
+    public void testUpdateDept() {
         Department department = new Department();
         department.setDeptId(2);
         department.setDeptName("睡觉");
@@ -46,7 +47,7 @@ public class DeptMapperTest {
      * 测试根据id、部门名、部门领导名查询
      */
     @Test
-    public void testSelectOneById(){
+    public void testSelectOneById() {
 //        Department department = departmentMapper.selectOne(2);
 //        Department department = departmentMapper.selectOneByName("睡觉");
         Department department = departmentMapper.selectOneByLeader("liububu");
@@ -57,7 +58,7 @@ public class DeptMapperTest {
      * 测试修改
      */
     @Test
-    public void testSelectOneByName(){
+    public void testSelectOneByName() {
         Department liububu = departmentMapper.selectOneByName("睡觉");
         System.out.println(liububu);
     }
@@ -66,7 +67,7 @@ public class DeptMapperTest {
      * 测试修改
      */
     @Test
-    public void testSelectAll(){
+    public void testSelectAll() {
         List<Department> departments = departmentMapper.selectAll();
         for (Department department : departments) {
             System.out.println(department);
@@ -74,7 +75,7 @@ public class DeptMapperTest {
     }
 
     @Test
-    public void testCount(){
+    public void testCount() {
         /*int i = departmentMapper.countDepts();
         System.out.println(i);*/
         List<Employee> employees = departmentMapper.selectLimitAndOffset(1, 2);

@@ -15,7 +15,7 @@ public class Account implements Serializable {
     private Double money;
 
     private List<User> luser;
-    private Map<String,User> muser;
+    private Map<String, User> muser;
 
 
     public List<User> getLuser() {

@@ -32,7 +32,7 @@ public class CRUDtest {
     }
 
     @After
-    public void destory() throws Exception{
+    public void destory() throws Exception {
         sqlSession.commit();
         sqlSession.close();
         in.close();
@@ -40,10 +40,11 @@ public class CRUDtest {
 
     /**
      * 根据id查询用户信息
+     *
      * @throws Exception
      */
     @Test
-    public void findByIdTest(){
+    public void findByIdTest() {
         User user = userdao.findById(52);
         System.out.println(user);
     }
@@ -52,7 +53,7 @@ public class CRUDtest {
      * 根据用户名模糊查询用户信息
      */
     @Test
-    public void findUserByNameTest(){
+    public void findUserByNameTest() {
         List<User> users = userdao.findUserByName("%王%");
         for (User user : users) {
             System.out.println(user);
@@ -63,7 +64,7 @@ public class CRUDtest {
      * 保存用户
      */
     @Test
-    public void insertTest(){
+    public void insertTest() {
         User user1 = new User();
         user1.setUsername("jjj");
         user1.setAddress("南京市");
@@ -71,11 +72,12 @@ public class CRUDtest {
         user1.setBirthday(new Date());
         userdao.saveUser(user1);
     }
+
     /**
      * 更新用户
      */
     @Test
-    public void updateTest(){
+    public void updateTest() {
         User user1 = new User();
         user1.setId(55);
         user1.setUsername("kkk");
@@ -89,7 +91,7 @@ public class CRUDtest {
      * 删除用户
      */
     @Test
-    public void deleteTest(){
+    public void deleteTest() {
         userdao.deleteUser(55);
     }
 }

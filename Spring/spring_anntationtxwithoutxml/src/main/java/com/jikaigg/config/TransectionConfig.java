@@ -12,11 +12,12 @@ import javax.sql.DataSource;
 public class TransectionConfig {
     /**
      * 用于创建事务管理器对象
+     *
      * @param dataSource
      * @return
      */
     @Bean("tansectionManager")
-    public PlatformTransactionManager createTransectionManager(DataSource dataSource){
+    public PlatformTransactionManager createTransectionManager(DataSource dataSource) {
         return new DataSourceTransactionManager(dataSource);
     }
 }

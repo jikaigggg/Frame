@@ -24,6 +24,7 @@ public class ProfileController {
                           @PathVariable("action") String action,
                           HttpServletRequest request,
                           Model model) {
+        System.out.println(page +"-------"+size);
         User user = (User)request.getSession().getAttribute("user");
 
         if (user == null){

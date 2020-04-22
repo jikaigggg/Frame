@@ -7,7 +7,8 @@ public enum CustomizeErrorCode implements ICustomizeErrorCode {
     NO_LOGIN(2003, "未登陆，请先登录"),
     SYSTEM_ERROR(2004, "你找的页面不存在，请尝试其他页面"),
     TYPR_PARAM_NOT_FOUND(2005, "类型不对，请重新输入"),
-    COMMENT_NOT_FOUND(2006, "你评论的问题不存在");
+    COMMENT_NOT_FOUND(2006, "你评论的评论不存在"),
+    COMMENT_NULL(2007, "你评论的内容不能为空");
 
     @Override
     public String getMessage() {

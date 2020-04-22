@@ -31,7 +31,6 @@ public class HelloController {
                         Model model) {
         PageDTO pageList = questionService.selectList(page, size);
         model.addAttribute("pageList", pageList);
-        System.out.println(pageList);
 //        System.out.println(questionList);
         return "index";
     }

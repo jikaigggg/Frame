@@ -23,6 +23,7 @@ public class QuestionController {
         questionService.flushViewCount(id);
         QuestionDTO questionDTO = questionService.getQuestionById(id);
         model.addAttribute("question", questionDTO);
+        System.out.println(questionDTO);
         return "question";
     }
 }

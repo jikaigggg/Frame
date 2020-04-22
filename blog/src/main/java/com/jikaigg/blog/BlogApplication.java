@@ -1,8 +1,10 @@
 package com.jikaigg.blog;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+//@MapperScan("com.jikaigg.blog.mapper")
 @SpringBootApplication
 public class BlogApplication {
 

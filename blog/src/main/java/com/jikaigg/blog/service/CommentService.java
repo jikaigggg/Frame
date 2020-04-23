@@ -13,6 +13,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Service
 public class CommentService {
     @Autowired
@@ -29,6 +31,9 @@ public class CommentService {
      */
     @Transactional
     public void insertComment(CommentDTO commentDTO) {
+        if (commentDTO.getContent() == null){
+            throw new CustomizeException(CustomizeErrorCode.COMMENT_NULL);
+        }
         //新建一个comment的pojo用来映射数据库
         Comment comment = new Comment();
         //将commentDTO中的字段赋值到comment实体类上
@@ -53,13 +58,20 @@ public class CommentService {
             //调用mapper插入数据库
             commentMapper.insert(comment);
         } else {
+            Question question = questionMapper.getQuestionById(comment.getParentId().intValue());
+            if (question == null){
+                throw new CustomizeException(CustomizeErrorCode.QUESTION_NOT_FOUND);
+            }
             //回复问题
             commentMapper.insert(comment);
-            System.out.println(comment.getParentId().intValue());
             //给问题添加完以及评论之后需要更新question表中的comment_count字段加一
             questionMapper.updateQuestionCommentCount(comment.getParentId().intValue());
         }
     }
 
-    ;
+    public List<CommentDTO> listByQuestionId(Integer id) {
+        List<CommentDTO> commentDTOS = commentMapper.listByQuestionId(Long.valueOf(id));
+        System.out.println(commentDTOS);
+        return commentDTOS;
+    }
 }

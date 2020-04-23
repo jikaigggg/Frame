@@ -22,7 +22,10 @@ function postcomment() {
         success: function (response) {
             /*如果请求返回200，为成功，将问题也的回复框部分隐藏*/
             if (response.code == 200) {
-                $("#content_id").hide();
+                window.location.reload();
+                // $("#content_id").hide();
+                $("#comment").val("");
+
             } else {
                 /*请求失败，弹窗提示失败的信息*/
                 alert(response.message);

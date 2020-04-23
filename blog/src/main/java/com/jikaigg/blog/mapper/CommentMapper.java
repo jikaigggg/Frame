@@ -1,10 +1,13 @@
 package com.jikaigg.blog.mapper;
 
+import com.jikaigg.blog.dto.CommentDTO;
 import com.jikaigg.blog.pojo.Comment;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
+
+import java.util.List;
 
 @Mapper
 public interface CommentMapper {
@@ -26,4 +29,7 @@ public interface CommentMapper {
      */
     @Select("select * from comment where parent_id = #{parentId}")
     Comment selectCommentById(@Param("parentId") Long parentId);
+
+    @Select("select * from comment where parent_id = #{parentId}")
+    List<CommentDTO> listByQuestionId(@Param("parentId") Long parentId);
 }

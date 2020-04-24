@@ -18,9 +18,7 @@ public class Demo1 {
             }
         };*/
         // lambda表达式实现
-        Printer printer = (String str)->{
-            System.out.println(str);
-        };
+        Printer printer = str-> System.out.println(str) ;
         Demo1 demo1 = new Demo1();
         String s = "yaojikai";
         demo1.printSomething(s,printer);

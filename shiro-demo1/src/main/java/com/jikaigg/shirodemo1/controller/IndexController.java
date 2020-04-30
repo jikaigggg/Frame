@@ -9,8 +9,10 @@ import org.apache.shiro.subject.Subject;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.xml.ws.RequestWrapper;
+import javax.xml.ws.RespectBinding;
 
 @Controller
 public class IndexController {
@@ -55,5 +57,11 @@ public class IndexController {
             model.addAttribute("msg","其他问题");
             return "login";
         }
+    }
+
+    @RequestMapping("/noauth")
+    @ResponseBody
+    public String noauth(){
+        return "未授权";
     }
 }

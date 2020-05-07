@@ -1,3 +1,4 @@
+
 spring:
   datasource:
     username: root
@@ -23,4 +24,6 @@ spring:
     maxPoolPreparedStatementPerConnectionSize: 20
     useGlobalDataSouceStat: true
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlmillis=500
+  main:
+    allow-bean-definition-overriding: true
 

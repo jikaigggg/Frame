@@ -4,6 +4,7 @@ import com.jikaigg.shirodemo1.service.UserService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import redis.clients.jedis.Jedis;
 
 @SpringBootTest
 class ShiroDemo1ApplicationTests {
@@ -12,7 +13,8 @@ class ShiroDemo1ApplicationTests {
     UserService userService;
     @Test
     void contextLoads() {
-        System.out.println(userService.queryUserByName("yaojikai"));
+        Jedis jedis = new Jedis("localhost");
+        jedis.set("shi1","mengyu1");
     }
 
 }
